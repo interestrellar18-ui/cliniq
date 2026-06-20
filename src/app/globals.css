@@ -573,3 +573,57 @@ font-size:70px;
 color:#7fc5b5;
 
 }
+
+.top-menu a{
+  color:#d9d8c7;
+  text-decoration:none;
+}
+
+.top-menu a:hover{
+  color:#7fc5b5;
+}
+
+.new-case{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+height:145px;
+
+border:2px solid #cfc8b5;
+
+color:#d9d8c7;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+.new-case span{
+
+font-size:50px;
+
+color:#7fc5b5;
+
+}
+
+
+
+.new-case:hover{
+
+background:#7fc5b5;
+
+color:#071211;
+
+}
+
+
+.new-case:hover span{
+
+color:#071211;
+
+}

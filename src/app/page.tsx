@@ -1,5 +1,6 @@
 import Folder from "@/components/Folder";
 import { cases } from "../data/cases";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -30,21 +31,27 @@ export default function Home() {
           CASOS
         </div>
 
+        <Link 
+        href="/evidencias"
+        className="tab"
+        >
+        EVIDÊNCIAS
+        </Link>
 
-        <div className="tab">
-          EVIDÊNCIAS
-        </div>
+       <Link
+        href="/observacoes"
+        className="tab"
+        >
+          MINHAS NOTAS
+        </Link>
 
 
-        <div className="tab">
-          OBSERVAÇÕES
-        </div>
-
-
-        <div className="tab">
-          DIAGNÓSTICOS
-        </div>
-
+        <Link
+        href="/diagnosticos"
+        className="tab"
+        >
+        DIAGNÓSTICOS
+        </Link>
 
       </section>
 
@@ -198,16 +205,21 @@ export default function Home() {
 
 
 
-          <div className="new-case">
+         <a
+href="https://mail.google.com/mail/?view=cm&fs=1&to=inter.estrellar18@gmail.com&su=Novo caso clínico&body=Olá, gostaria de adicionar um novo caso ao arquivo."
+target="_blank"
+className="new-case"
+>
+  
+<h3>
+NOVO CASO
+</h3>
 
-            NOVO CASO
+<span>
++
+</span>
 
-            <span>
-              +
-            </span>
-
-
-          </div>
+</a>
 
 
 

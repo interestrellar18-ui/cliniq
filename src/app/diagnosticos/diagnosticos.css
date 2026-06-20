@@ -1,0 +1,263 @@
+.diagnostic-page{
+
+min-height:100vh;
+
+background:#061312;
+
+color:#e5dfc5;
+
+padding:50px;
+
+font-family:monospace;
+
+}
+
+
+
+/* CABEÇALHO */
+
+.diagnostic-header{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+
+.diagnostic-header p{
+
+color:#63ddd1;
+
+letter-spacing:5px;
+
+font-size:14px;
+
+}
+
+
+.diagnostic-header h1{
+
+font-size:50px;
+
+letter-spacing:8px;
+
+margin-top:20px;
+
+}
+
+
+
+
+/* BUSCA */
+
+
+.search-diagnostic{
+
+width:600px;
+
+margin:0 auto 50px;
+
+background:#d4d0c8;
+
+border:3px solid #000;
+
+padding:12px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+box-shadow:
+
+5px 5px 0 #000;
+
+}
+
+
+
+.search-diagnostic input{
+
+flex:1;
+
+background:white;
+
+border:2px inset #777;
+
+padding:12px;
+
+font-family:monospace;
+
+font-size:18px;
+
+}
+
+
+
+
+/* GRID */
+
+
+.diagnostic-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+
+
+/* CARD */
+
+
+.diagnostic-card{
+
+background:#d8d2bd;
+
+color:#111;
+
+border:3px solid #111;
+
+padding:25px;
+
+box-shadow:
+
+7px 7px 0 #000;
+
+position:relative;
+
+}
+
+
+
+
+.diagnostic-card span{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+color:#174b47;
+
+}
+
+
+
+.diagnostic-card h2{
+
+font-size:35px;
+
+margin:20px 0;
+
+border-bottom:2px solid #111;
+
+padding-bottom:10px;
+
+}
+
+
+
+
+
+.diagnostic-card h3{
+
+margin-top:25px;
+
+font-size:18px;
+
+letter-spacing:2px;
+
+}
+
+
+
+
+.diagnostic-card p,
+.diagnostic-card li{
+
+font-size:17px;
+
+line-height:1.5;
+
+}
+
+
+
+
+
+.diagnostic-card ul{
+
+padding-left:20px;
+
+}
+
+
+
+
+
+/* DIFICULDADE */
+
+
+.difficulty{
+
+display:inline-block;
+
+margin-top:10px;
+
+padding:8px 15px;
+
+border:2px solid #111;
+
+background:#eee;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+/* VOLTAR */
+
+
+.back{
+
+display:block;
+
+width:max-content;
+
+margin:50px auto 0;
+
+color:#63ddd1;
+
+text-decoration:none;
+
+font-size:20px;
+
+border:2px solid #63ddd1;
+
+padding:12px 25px;
+
+}
+
+
+
+.back:hover{
+
+background:#63ddd1;
+
+color:#061312;
+
+}
