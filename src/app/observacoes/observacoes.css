@@ -314,3 +314,187 @@ background:#00d9c0;
 color:#06110f;
 
 }
+
+/* ==========================
+   MOBILE - MINHAS NOTAS
+========================== */
+
+@media(max-width:600px){
+
+
+.notes-page{
+
+padding:25px 12px;
+
+}
+
+
+
+/* TÍTULO */
+
+.notes-title{
+
+margin-bottom:25px;
+
+}
+
+
+.notes-title p{
+
+font-size:11px;
+
+letter-spacing:3px;
+
+}
+
+
+
+.notes-title h1{
+
+font-size:35px;
+
+margin-top:15px;
+
+}
+
+
+
+
+
+/* JANELA RETRÔ */
+
+.mail-window{
+
+width:100%;
+
+box-sizing:border-box;
+
+box-shadow:5px 5px 0 #000;
+
+}
+
+
+
+
+/* BARRA SUPERIOR */
+
+.window-top{
+
+height:35px;
+
+padding:0 10px;
+
+font-size:14px;
+
+}
+
+
+
+
+
+/* CONTEÚDO */
+
+.window-content{
+
+padding:15px;
+
+}
+
+
+
+
+
+.field label{
+
+font-size:14px;
+
+}
+
+
+
+
+
+input,
+textarea{
+
+font-size:14px;
+
+}
+
+
+
+input{
+
+height:35px;
+
+}
+
+
+
+textarea{
+
+height:150px;
+
+}
+
+
+
+
+
+.save-button{
+
+width:100%;
+
+padding:10px;
+
+}
+
+
+
+
+
+/* NOTAS SALVAS */
+
+.note-card{
+
+padding:12px;
+
+}
+
+
+
+.note-header{
+
+font-size:13px;
+
+}
+
+
+
+.note-card p{
+
+font-size:14px;
+
+}
+
+
+
+
+
+/* BOTÃO VOLTAR */
+
+.back-button{
+
+margin-top:25px;
+
+width:100%;
+
+text-align:center;
+
+box-sizing:border-box;
+
+}
+
+
+
+}

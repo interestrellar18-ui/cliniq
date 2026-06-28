@@ -261,3 +261,196 @@ background:#63ddd1;
 color:#061312;
 
 }
+
+/* ==========================
+   MOBILE - DIAGNÓSTICOS
+========================== */
+
+@media(max-width:600px){
+
+
+.diagnostic-page{
+
+padding:20px 12px;
+
+}
+
+
+
+/* CABEÇALHO */
+
+.diagnostic-header{
+
+margin-bottom:25px;
+
+}
+
+
+
+.diagnostic-header p{
+
+font-size:10px;
+
+letter-spacing:3px;
+
+}
+
+
+
+.diagnostic-header h1{
+
+font-size:36px;
+
+letter-spacing:5px;
+
+margin-top:15px;
+
+}
+
+
+
+
+
+/* BUSCA */
+
+.search-diagnostic{
+
+width:100%;
+
+box-sizing:border-box;
+
+margin-bottom:30px;
+
+padding:10px;
+
+}
+
+
+
+.search-diagnostic input{
+
+font-size:16px;
+
+padding:10px;
+
+}
+
+
+
+
+
+/* GRID */
+
+.diagnostic-grid{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+
+
+
+
+/* CARDS */
+
+.diagnostic-card{
+
+padding:18px;
+
+box-shadow:
+
+5px 5px 0 #000;
+
+}
+
+
+
+.diagnostic-card span{
+
+font-size:12px;
+
+letter-spacing:2px;
+
+}
+
+
+
+.diagnostic-card h2{
+
+font-size:28px;
+
+margin:15px 0;
+
+}
+
+
+
+.diagnostic-card h3{
+
+font-size:16px;
+
+margin-top:20px;
+
+}
+
+
+
+
+.diagnostic-card p,
+.diagnostic-card li{
+
+font-size:16px;
+
+}
+
+
+
+
+
+.diagnostic-card ul{
+
+padding-left:18px;
+
+}
+
+
+
+
+
+/* DIFICULDADE */
+
+.difficulty{
+
+padding:6px 10px;
+
+font-size:14px;
+
+}
+
+
+
+
+
+/* VOLTAR */
+
+.back{
+
+width:100%;
+
+box-sizing:border-box;
+
+text-align:center;
+
+font-size:18px;
+
+margin-top:30px;
+
+padding:10px;
+
+}
+
+
+
+}

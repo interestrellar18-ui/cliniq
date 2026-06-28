@@ -1,241 +1,226 @@
+"use client";
+
 import Folder from "@/components/Folder";
 import { cases } from "../data/cases";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
 
-  return (
 
-    <main className="game">
+const [resolvidos,setResolvidos] = useState(0);
 
 
-      <header className="header">
 
-        <h1>
-          CLINIQ
-        </h1>
+useEffect(()=>{
 
-        <p>
-          ARQUIVO DE INVESTIGAÇÃO CLÍNICA
-        </p>
+const salvos = JSON.parse(
+localStorage.getItem("casosResolvidos") || "[]"
+);
 
-      </header>
 
+setResolvidos(salvos.length);
 
 
+},[]);
 
-      <section className="top-menu">
 
-        <div className="tab active">
-          CASOS
-        </div>
 
-        <Link 
-        href="/evidencias"
-        className="tab"
-        >
-        EVIDÊNCIAS
-        </Link>
+const totalCasos = cases.length;
 
-       <Link
-        href="/observacoes"
-        className="tab"
-        >
-          MINHAS NOTAS
-        </Link>
 
 
-        <Link
-        href="/diagnosticos"
-        className="tab"
-        >
-        DIAGNÓSTICOS
-        </Link>
+return (
 
-      </section>
+<main className="game">
 
 
+<header className="header">
 
+<h1>
+CLINIQ
+</h1>
 
+<p>
+ARQUIVO DE INVESTIGAÇÃO CLÍNICA
+</p>
 
-      <div className="main-area">
+</header>
 
 
 
-        <section className="cases">
 
 
-          <div className="instruction">
+<section className="top-menu">
 
-            ▶ selecione um prontuário para iniciar investigação
 
-          </div>
+<div className="tab active">
+CASOS
+</div>
 
 
+<Link 
+href="/evidencias"
+className="tab"
+>
+EVIDÊNCIAS
+</Link>
 
 
 
-          <div className="folder-grid">
+<Link
+href="/observacoes"
+className="tab"
+>
+MINHAS NOTAS
+</Link>
 
 
-            {
-              cases.map((item: {
-                id: string;
-                title: string;
-              }) => (
 
-                <Folder
+<Link
+href="/diagnosticos"
+className="tab"
+>
+DIAGNÓSTICOS
+</Link>
 
-                  key={item.id}
 
-                  id={item.id}
+</section>
 
-                  title={item.title}
 
-                />
 
-              ))
-            }
 
 
+<div className="main-area">
 
 
-            <Folder
 
-              id="003"
+<section className="cases">
 
-              title="Novo Caso"
 
-              locked
+<div className="instruction">
 
-            />
+▶ selecione um prontuário para iniciar investigação
 
+</div>
 
 
-            <Folder
 
-              id="004"
+<div className="folder-grid">
 
-              title="Novo Caso"
 
-              locked
+{
+cases.map((item)=>(
+<Folder
 
-            />
+key={item.id}
 
+id={item.id}
 
+title={item.title}
 
-            <Folder
+/>
+))
+}
 
-              id="005"
 
-              title="Novo Caso"
 
-              locked
+<Folder id="003" title="Novo Caso" locked />
+<Folder id="004" title="Novo Caso" locked />
+<Folder id="005" title="Novo Caso" locked />
+<Folder id="006" title="Novo Caso" locked />
 
-            />
 
+</div>
 
 
-            <Folder
+</section>
 
-              id="006"
 
-              title="Novo Caso"
 
-              locked
 
-            />
 
 
+<aside className="side-panel">
 
-          </div>
 
 
+<div className="counter">
 
-        </section>
 
+CASOS
 
 
+<strong>
 
+{String(resolvidos).padStart(2,"0")} / {String(totalCasos).padStart(2,"0")}
 
+</strong>
 
 
-        <aside className="side-panel">
+</div>
 
 
-          <div className="counter">
 
-            CASOS
 
-            <strong>
 
-              {cases.length.toString().padStart(2,"0")} / 45
+<div className="box">
 
-            </strong>
 
+<h3>
+INSTRUÇÕES
+</h3>
 
-          </div>
 
+<p>
+Clique em um prontuário
+para acessar história clínica,
+exames e evidências.
+</p>
 
 
+</div>
 
 
-          <div className="box">
 
 
-            <h3>
-              INSTRUÇÕES
-            </h3>
 
 
-            <p>
 
-              Clique em um prontuário
-              para acessar história clínica,
-              exames e evidências.
-
-            </p>
-
-
-          </div>
-
-
-
-
-
-
-         <a
+<a
 href="https://mail.google.com/mail/?view=cm&fs=1&to=inter.estrellar18@gmail.com&su=Novo caso clínico&body=Olá, gostaria de adicionar um novo caso ao arquivo."
 target="_blank"
 className="new-case"
 >
-  
+
+
 <h3>
 NOVO CASO
 </h3>
 
+
 <span>
 +
 </span>
+
 
 </a>
 
 
 
 
-        </aside>
+</aside>
 
 
 
-
-      </div>
-
+</div>
 
 
 
-    </main>
+</main>
 
-  );
+
+);
 
 }

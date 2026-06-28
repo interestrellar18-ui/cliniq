@@ -28,8 +28,22 @@ export interface ClinicalCase {
 
 
   exams:{
+
     name:string;
+
     result:string;
+
+
+    media?:{
+
+      type:"image" | "video";
+
+      src:string;
+
+      caption:string;
+
+    }[];
+
   }[];
 
 
@@ -43,6 +57,7 @@ export interface ClinicalCase {
 
 
   expectedAnswer:{
+
     summary:string;
 
     discussion:string;
@@ -50,9 +65,11 @@ export interface ClinicalCase {
     reasoning:string[];
 
     conduct:string[];
+
   };
 
 }
+
 
 
 
@@ -60,167 +77,369 @@ export const cases:ClinicalCase[] = [
 
 
 {
-  id:"001",
 
-  title:"Síndrome Febril Prolongada",
+id:"001",
 
-  specialty:"Clínica Médica",
+title:"Síndrome Febril Prolongada",
 
-  difficulty:"Intermediário",
+specialty:"Clínica Médica",
 
-  status:"Em investigação",
+difficulty:"Intermediário",
 
+status:"Em investigação",
 
 
-  patient:{
 
-    name:"Paciente 001",
+patient:{
 
-    age:42,
+name:"André Menezes Silva",
 
-    sex:"Masculino"
+age:42,
 
-  },
+sex:"Masculino"
 
+},
 
 
-  chiefComplaint:
 
-  "Febre persistente há aproximadamente 20 dias.",
+chiefComplaint:
 
+"Febre persistente há aproximadamente 20 dias.",
 
 
-  history:
 
-  "Paciente apresenta febre diária, sudorese noturna, perda ponderal progressiva e cansaço intenso. Refere piora dos sintomas no período noturno.",
+history:
 
+"Paciente apresenta febre diária, sudorese noturna, perda ponderal progressiva e cansaço intenso. Refere piora dos sintomas no período noturno.",
 
 
-  physicalExam:[
 
-    "Temperatura elevada",
+physicalExam:[
 
-    "Sudorese noturna",
+"Temperatura elevada",
 
-    "Perda de peso",
+"Sudorese noturna",
 
-    "Astenia"
+"Perda de peso",
 
-  ],
+"Astenia"
 
+],
 
 
-  exams:[
 
-    {
+exams:[
 
-      name:"Hemograma",
+{
 
-      result:"Leucocitose discreta e alterações inflamatórias."
+name:"Hemograma",
 
-    },
+result:"Leucocitose discreta e alterações inflamatórias."
 
+},
 
-    {
 
-      name:"PCR",
+{
 
-      result:"Elevada, indicando processo inflamatório ativo."
+name:"PCR",
 
-    },
+result:"Elevada, indicando processo inflamatório ativo."
 
+},
 
-    {
 
-      name:"Radiografia de tórax",
+{
 
-      result:"Imagem sugestiva de alteração pulmonar a investigar."
+name:"Radiografia de tórax",
 
-    }
+result:"Imagem sugestiva de alteração pulmonar a investigar.",
 
-  ],
 
+media:[
 
+{
 
-  clues:[
+type:"image",
 
-    "Febre há mais de 3 semanas",
+src:"/casos/001/rxtoraxcasoum.png",
 
-    "Perda ponderal",
+caption:"Radiografia de tórax do paciente."
 
-    "Sudorese noturna",
+}
 
-    "Síndrome consumptiva"
+]
 
-  ],
+}
 
+],
 
 
-  hypotheses:[
 
-    "Tuberculose",
+clues:[
 
-    "Linfoma",
+"Febre há mais de 3 semanas",
 
-    "Endocardite infecciosa",
+"Perda ponderal",
 
-    "Infecção crônica"
+"Sudorese noturna",
 
-  ],
+"Síndrome consumptiva"
 
+],
 
 
-  diagnosis:
 
-  "Tuberculose pulmonar (a confirmar através de investigação complementar).",
+hypotheses:[
 
+"Tuberculose",
 
+"Linfoma",
 
+"Endocardite infecciosa",
 
-  expectedAnswer:{
+"Infecção crônica"
 
+],
 
-    summary:
 
-    "O quadro sugere uma síndrome febril prolongada com sinais de alerta, principalmente pela associação entre febre persistente, sudorese noturna e perda ponderal.",
 
+diagnosis:
 
+"Tuberculose pulmonar (a confirmar através de investigação complementar).",
 
-    discussion:
 
-    "O médico deve reconhecer que febre prolongada exige investigação ampla. As principais hipóteses incluem doenças infecciosas, neoplasias e doenças inflamatórias. Neste caso, a presença de sintomas constitucionais direciona a investigação para causas crônicas, especialmente tuberculose.",
 
+expectedAnswer:{
 
 
-    reasoning:[
+summary:
 
-      "Identificar que a duração da febre caracteriza uma febre prolongada.",
+"O quadro sugere uma síndrome febril prolongada com sinais de alerta, principalmente pela associação entre febre persistente, sudorese noturna e perda ponderal.",
 
-      "Associar perda de peso e sudorese noturna com doenças crônicas.",
 
-      "Considerar tuberculose como hipótese principal devido ao padrão clínico.",
 
-      "Investigar diagnósticos diferenciais como linfoma e endocardite."
+discussion:
 
-    ],
+"O médico deve reconhecer que febre prolongada exige investigação ampla. As principais hipóteses incluem doenças infecciosas, neoplasias e doenças inflamatórias. Neste caso, a presença de sintomas constitucionais direciona a investigação para causas crônicas, especialmente tuberculose.",
 
 
 
-    conduct:[
+reasoning:[
 
-      "Solicitar exames complementares direcionados.",
+"Identificar que a duração da febre caracteriza uma febre prolongada.",
 
-      "Realizar investigação microbiológica para tuberculose.",
+"Associar perda de peso e sudorese noturna com doenças crônicas.",
 
-      "Avaliar imagem pulmonar.",
+"Considerar tuberculose como hipótese principal devido ao padrão clínico.",
 
-      "Realizar acompanhamento clínico e reavaliar hipóteses."
+"Investigar diagnósticos diferenciais como linfoma e endocardite."
 
-    ]
+],
 
-  }
+
+
+conduct:[
+
+"Solicitar exames complementares direcionados.",
+
+"Realizar investigação microbiológica para tuberculose.",
+
+"Avaliar imagem pulmonar.",
+
+"Realizar acompanhamento clínico e reavaliar hipóteses."
+
+]
 
 
 }
 
+},
+
+{
+
+id:"002",
+
+title:"Dor Torácica Aguda",
+
+specialty:"Cardiologia",
+
+difficulty:"Intermediário",
+
+status:"Em investigação",
+
+
+
+patient:{
+
+name:"Mariana Costa Ferreira",
+
+age:58,
+
+sex:"Feminino"
+
+},
+
+
+
+chiefComplaint:
+
+"Dor no peito iniciada há aproximadamente 2 horas, associada à falta de ar.",
+
+
+
+history:
+
+"Paciente relata dor torácica em aperto, localizada em região retroesternal, com irradiação para membro superior esquerdo. Refere náuseas, sudorese fria e sensação de mal-estar. Possui histórico de hipertensão arterial e diabetes mellitus.",
+
+
+
+physicalExam:[
+
+"Paciente ansiosa e desconfortável",
+
+"Sudorese intensa",
+
+"Palidez cutânea",
+
+"Frequência cardíaca aumentada",
+
+"Dor persistente em região torácica"
+
+],
+
+
+
+exams:[
+
+{
+
+name:"Eletrocardiograma",
+
+result:"Alterações sugestivas de isquemia miocárdica.",
+
+
+media:[
+
+{
+
+type:"image",
+
+src:"/casos/002/ecgcasodois.png",
+
+caption:"Eletrocardiograma inicial do paciente."
+
+}
+
+]
+
+},
+
+
+
+{
+
+name:"Troponina",
+
+result:"Marcador cardíaco elevado, sugerindo lesão miocárdica."
+
+},
+
+
+
+{
+
+name:"Hemograma",
+
+result:"Sem alterações significativas."
+
+}
+
+],
+
+
+
+clues:[
+
+"Dor torácica em aperto",
+
+"Irradiação para braço esquerdo",
+
+"Sudorese fria",
+
+"Fatores de risco cardiovascular",
+
+"Alteração de marcador cardíaco"
+
+],
+
+
+
+hypotheses:[
+
+"Infarto agudo do miocárdio",
+
+"Angina instável",
+
+"Embolia pulmonar",
+
+"Pericardite"
+
+],
+
+
+
+diagnosis:
+
+"Infarto agudo do miocárdio com elevação de marcadores cardíacos.",
+
+
+
+expectedAnswer:{
+
+
+summary:
+
+"Paciente apresenta quadro compatível com síndrome coronariana aguda, caracterizada por dor torácica típica associada a sinais de sofrimento miocárdico.",
+
+
+
+discussion:
+
+"A dor torácica deve ser investigada rapidamente devido ao risco de eventos cardiovasculares graves. A associação entre dor em aperto, irradiação, sudorese e elevação da troponina aumenta a probabilidade de infarto agudo do miocárdio.",
+
+
+
+reasoning:[
+
+"Reconhecer características de dor torácica típica.",
+
+"Identificar fatores de risco cardiovascular.",
+
+"Relacionar alteração da troponina com lesão do músculo cardíaco.",
+
+"Diferenciar infarto de outros diagnósticos de dor torácica."
+
+],
+
+
+
+conduct:[
+
+"Realizar monitorização cardíaca.",
+
+"Solicitar eletrocardiograma seriado.",
+
+"Avaliar necessidade de terapia de reperfusão.",
+
+"Controlar fatores de risco cardiovasculares."
+
+]
+
+
+}
+
+}
+
+
 ];
+

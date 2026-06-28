@@ -1,7 +1,7 @@
 "use client";
 
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ClinicalCase } from "@/data/cases";
@@ -25,38 +25,187 @@ caseData
 
 
 
-const [status,setStatus] = useState(
-caseData.status
+const answerRef = useRef<HTMLDivElement>(null);
+
+
+
+
+const [status,setStatus] = useState(()=>{
+
+
+const resolvidos = JSON.parse(
+
+localStorage.getItem("casosResolvidos") || "[]"
+
 );
 
 
 
+if(resolvidos.includes(caseData.id)){
+
+return "Resolvido";
+
+}
+
+
+
+return "Em investigação";
+
+
+});
+
+
+
+
+
+
 const solved =
+
 status==="Resolvido" &&
+
 caseData.expectedAnswer;
+
+
+
+
+
+
+
+function resolverCaso(){
+
+
+
+const resolvidos = JSON.parse(
+
+localStorage.getItem("casosResolvidos") || "[]"
+
+);
+
+
+
+if(!resolvidos.includes(caseData.id)){
+
+
+resolvidos.push(caseData.id);
+
+
+
+localStorage.setItem(
+
+"casosResolvidos",
+
+JSON.stringify(resolvidos)
+
+);
+
+
+}
+
+
+
+setStatus("Resolvido");
+
+
+
+
+
+setTimeout(()=>{
+
+
+answerRef.current?.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+},300);
+
+
+
+}
+
+
+
+
+
+
+
+function investigarCaso(){
+
+
+
+const resolvidos = JSON.parse(
+
+localStorage.getItem("casosResolvidos") || "[]"
+
+);
+
+
+
+const atualizados = resolvidos.filter(
+
+(id:string)=> id !== caseData.id
+
+);
+
+
+
+localStorage.setItem(
+
+"casosResolvidos",
+
+JSON.stringify(atualizados)
+
+);
+
+
+
+setStatus("Em investigação");
+
+
+}
+
+
+
 
 
 
 
 return (
 
+
+
 <main className="case-page">
+
+
+
+
 
 <div className="clipboard-bg">
 
-  <div className="clip-metal"></div>
 
-  <div className="clipboard-paper">
+<div className="clip-metal"></div>
 
-    <span>
-      ARQUIVO MÉDICO
-    </span>
 
-    <div className="fake-lines"></div>
+<div className="clipboard-paper">
 
-  </div>
+
+<span>
+ARQUIVO MÉDICO
+</span>
+
+
+<div className="fake-lines"></div>
+
 
 </div>
+
+
+</div>
+
+
+
 
 
 
@@ -64,11 +213,21 @@ return (
 
 
 
+
+
+
+
 <header className="case-title">
+
 
 ARQUIVO DE INVESTIGAÇÃO CLÍNICA
 
+
 </header>
+
+
+
+
 
 
 
@@ -77,12 +236,19 @@ ARQUIVO DE INVESTIGAÇÃO CLÍNICA
 <section className="document">
 
 
+
+
+
 <div className="clip"></div>
 
 
 
 
+
+
+
 <div className="document-header">
+
 
 
 <span>
@@ -92,11 +258,17 @@ PRONTUÁRIO #{caseData.id}
 </span>
 
 
+
+
+
 <h1>
 
 {caseData.title}
 
 </h1>
+
+
+
 
 
 <p>
@@ -106,6 +278,9 @@ PRONTUÁRIO #{caseData.id}
 </p>
 
 
+
+
+
 </div>
 
 
@@ -113,7 +288,11 @@ PRONTUÁRIO #{caseData.id}
 
 
 
+
+
+
 <div className="status-area">
+
 
 
 <h2>
@@ -124,11 +303,19 @@ STATUS DO CASO
 
 
 
+
+
+
 <div className="status-buttons">
 
 
+
+
+
 <button
-onClick={()=>setStatus("Em investigação")}
+
+onClick={investigarCaso}
+
 >
 
 INVESTIGAR
@@ -137,18 +324,14 @@ INVESTIGAR
 
 
 
-<button
-onClick={()=>setStatus("Em discussão")}
->
 
-DISCUSSÃO
-
-</button>
 
 
 
 <button
-onClick={()=>setStatus("Resolvido")}
+
+onClick={resolverCaso}
+
 >
 
 RESOLVER
@@ -157,7 +340,13 @@ RESOLVER
 
 
 
+
+
 </div>
+
+
+
+
 
 
 
@@ -168,6 +357,8 @@ RESOLVER
 </div>
 
 
+
+
 </div>
 
 
@@ -176,7 +367,10 @@ RESOLVER
 
 
 
+
+
 <Section title="PACIENTE">
+
 
 
 <p>
@@ -194,7 +388,10 @@ Sexo: {caseData.patient.sex}
 </p>
 
 
+
 </Section>
+
+
 
 
 
@@ -205,6 +402,7 @@ Sexo: {caseData.patient.sex}
 <Section title="QUEIXA PRINCIPAL">
 
 
+
 <p>
 
 {caseData.chiefComplaint}
@@ -212,7 +410,9 @@ Sexo: {caseData.patient.sex}
 </p>
 
 
+
 </Section>
+
 
 
 
@@ -224,11 +424,13 @@ Sexo: {caseData.patient.sex}
 <Section title="HISTÓRIA CLÍNICA">
 
 
+
 <p>
 
 {caseData.history}
 
 </p>
+
 
 
 </Section>
@@ -240,7 +442,8 @@ Sexo: {caseData.patient.sex}
 
 
 
-<Section title="EXAME FÍSICO">
+
+<Section title="EXAME FÍSICO E COMPLEMENTARES">
 
 
 <ul>
@@ -258,31 +461,99 @@ caseData.physicalExam.map(
 </ul>
 
 
+
+{
+caseData.exams.map((exam)=>(
+<div className="exam-card" key={exam.name}>
+
+
+<h3>
+{exam.name}
+</h3>
+
+
+<p>
+{exam.result}
+</p>
+
+
+
+{
+exam.media?.map((file)=>(
+<div 
+key={file.src}
+className="exam-media"
+>
+
+
+{
+file.type==="image" ? (
+
+<img
+src={file.src}
+alt={file.caption}
+/>
+
+)
+
+:
+
+(
+
+<video controls>
+
+<source src={file.src}/>
+
+</video>
+
+)
+
+}
+
+
+
+<span>
+
+{file.caption}
+
+</span>
+
+
+</div>
+))
+}
+
+
+
+</div>
+))
+}
 </Section>
-
-
-
-
-
-
 
 
 <Section title="EVIDÊNCIAS">
 
 
+
 {
 
 caseData.clues.map(
+
 (item,index)=>(
 
-<div 
+
+<div
+
 className="clue"
+
 key={index}
+
 >
 
 #{index+1} {item}
 
 </div>
+
 
 )
 
@@ -291,7 +562,9 @@ key={index}
 }
 
 
+
 </Section>
+
 
 
 
@@ -303,16 +576,23 @@ key={index}
 <Section title="HIPÓTESES DIAGNÓSTICAS">
 
 
+
 <ul>
+
 
 {
 
 caseData.hypotheses.map(
+
 (item)=>(
 
+
 <li key={item}>
+
 {item}
+
 </li>
+
 
 )
 
@@ -320,7 +600,10 @@ caseData.hypotheses.map(
 
 }
 
+
+
 </ul>
+
 
 
 </Section>
@@ -333,7 +616,15 @@ caseData.hypotheses.map(
 
 
 
-<div className="answer">
+<div
+
+className="answer"
+
+ref={answerRef}
+
+>
+
+
 
 
 <h2>
@@ -345,12 +636,18 @@ RESPOSTA ESPERADA DO MÉDICO
 
 
 
+
+
+
+
 {
 
 solved ? (
 
 
+
 <div>
+
 
 
 <h3>
@@ -360,11 +657,15 @@ Discussão clínica
 </h3>
 
 
+
+
 <p>
 
 {caseData.expectedAnswer.summary}
 
 </p>
+
+
 
 
 
@@ -377,6 +678,10 @@ Discussão clínica
 
 
 
+
+
+
+
 <h3>
 
 Raciocínio esperado
@@ -385,16 +690,24 @@ Raciocínio esperado
 
 
 
+
+
 <ul>
+
 
 {
 
 caseData.expectedAnswer.reasoning.map(
+
 (item)=>(
 
+
 <li key={item}>
+
 {item}
+
 </li>
+
 
 )
 
@@ -402,7 +715,14 @@ caseData.expectedAnswer.reasoning.map(
 
 }
 
+
+
 </ul>
+
+
+
+
+
 
 
 
@@ -415,60 +735,83 @@ Conduta esperada
 
 
 
+
+
 <ul>
+
 
 {
 
 caseData.expectedAnswer.conduct.map(
+
 (item)=>(
 
+
 <li key={item}>
+
 {item}
+
 </li>
+
 
 )
 
 )
 
 }
+
+
 
 </ul>
 
 
 
+
+
 </div>
 
 
 
 )
 
+
+
 :
 
-(
 
 
 <div className="locked">
+
 
 🔒
 
 <br/>
 
+
 RESPOSTA BLOQUEADA
+
 
 <br/>
 
+
 Resolva o caso para liberar.
+
 
 </div>
 
 
-)
 
 }
 
 
 
+
+
 </div>
+
+
+
+
 
 
 
@@ -481,7 +824,15 @@ Resolva o caso para liberar.
 
 
 
-<Link href="/" className="back">
+
+
+<Link
+
+href="/"
+
+className="back"
+
+>
 
 ← VOLTAR AO ARQUIVO
 
@@ -489,12 +840,20 @@ Resolva o caso para liberar.
 
 
 
+
+
+
 </main>
+
 
 );
 
 
+
 }
+
+
+
 
 
 
@@ -516,7 +875,10 @@ children:ReactNode;
 }){
 
 
+
 return (
+
+
 
 <div className="section">
 
@@ -528,10 +890,14 @@ return (
 </h2>
 
 
+
 {children}
 
 
+
 </div>
+
+
 
 );
 

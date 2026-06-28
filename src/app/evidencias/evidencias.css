@@ -498,3 +498,206 @@ bottom:2px;
 transform-origin:left center;
 
 }
+
+/* =========================
+   MOBILE - EVIDÊNCIAS
+========================= */
+
+@media (max-width:600px){
+
+
+.evidence-page{
+
+padding:20px;
+
+}
+
+
+
+/* CABEÇALHO */
+
+.evidence-header{
+
+margin-bottom:30px;
+
+}
+
+
+.evidence-header p{
+
+font-size:10px;
+letter-spacing:3px;
+
+}
+
+
+.evidence-header h1{
+
+font-size:38px;
+letter-spacing:6px;
+margin:20px 0;
+
+}
+
+
+
+
+/* BUSCA */
+
+.search-box{
+
+width:100%;
+margin-bottom:30px;
+padding:10px;
+
+}
+
+
+.search-box input{
+
+font-size:20px;
+
+}
+
+
+
+
+/* CARDS */
+
+.evidence-grid{
+
+grid-template-columns:1fr;
+gap:20px;
+
+}
+
+
+
+.evidence-card{
+
+padding:20px;
+
+}
+
+
+
+.evidence-card h2{
+
+font-size:26px;
+
+}
+
+
+
+
+
+/* DOCUMENTO */
+
+.document{
+
+padding:25px;
+box-shadow:8px 8px 0 #aaa38f;
+
+}
+
+
+
+.document-header{
+
+display:block;
+
+}
+
+
+
+.document-header h1{
+
+font-size:32px;
+
+}
+
+
+
+.file-id{
+
+margin-top:20px;
+
+}
+
+
+
+.title{
+
+font-size:32px;
+
+}
+
+
+
+
+
+.tags{
+
+gap:8px;
+
+}
+
+
+.tags span{
+
+padding:8px;
+
+}
+
+
+
+
+
+.content-grid{
+
+grid-template-columns:1fr;
+gap:20px;
+
+}
+
+
+
+.clinical{
+
+grid-column:auto;
+
+}
+
+
+
+
+.content-grid p,
+.content-grid li{
+
+font-size:18px;
+
+}
+
+
+
+
+
+.stamp{
+
+font-size:22px;
+right:20px;
+bottom:20px;
+
+}
+
+
+
+
+.back{
+
+font-size:20px;
+
+}
+
+
+}
