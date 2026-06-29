@@ -583,3 +583,40 @@ margin:25px auto;
 .clinical-box h3{
     color:#161d1b;
 }
+
+/* AJUSTE FINAL DAS CORES - EVIDÊNCIAS */
+
+.evidence-id-page{
+  color:#161d1b;
+}
+
+
+.evidence-id-page .box,
+.evidence-id-page .clinical-box{
+  color:#161d1b;
+}
+
+
+.evidence-id-page .box h3,
+.evidence-id-page .clinical-box h3{
+  color:#161d1b !important;
+}
+
+
+.evidence-id-page .box p,
+.evidence-id-page .box li,
+.evidence-id-page .clinical-box p,
+.evidence-id-page .clinical-box li{
+  color:#161d1b !important;
+}
+
+
+.evidence-id-page .tags span{
+  color:#161d1b;
+}
+
+
+.evidence-id-page .file-header h1,
+.evidence-id-page .file-header p{
+  color:#161d1b;
+}
