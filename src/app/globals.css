@@ -537,12 +537,11 @@ font-size:22px;
 
 
 
-
 .box h3{
 
 color:#7fc5b5;
-
 letter-spacing:5px;
+font-size:25px;
 
 }
 
@@ -550,18 +549,36 @@ letter-spacing:5px;
 
 .new-case{
 
-border:2px solid #b9aa7c;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 
-margin-top:40px;
+height:140px;
 
-padding:25px;
+border:2px solid #d8c77a;
 
-text-align:center;
+text-decoration:none;
 
-font-size:25px;
+color:#d8d3bd;
+
+position:relative;
+
+overflow:visible;
 
 }
 
+.new-case span{
+
+font-size:45px;
+
+line-height:1;
+
+margin-top:10px;
+
+color:#62e6d4;
+
+}
 
 
 .new-case span{
@@ -1053,4 +1070,12 @@ margin-top:25px;
     line-height: 1;
   }
 
+}
+
+.box h3{
+  color:#7fc5b5 !important;
+}
+
+.box{
+  color:#f4e9cf !important;
 }

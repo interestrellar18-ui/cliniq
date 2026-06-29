@@ -220,7 +220,7 @@ gap:30px;
 
 .box{
 
-border-left:6px solid #147c73;
+border-left:6px solid #161d1b;
 
 padding-left:20px;
 
@@ -307,7 +307,7 @@ max-width:1000px;
 
 margin:40px auto;
 
-color:#7fc5b5;
+color:#97c9bd;
 
 font-size:25px;
 
@@ -577,4 +577,9 @@ margin:25px auto;
 }
 
 
+}
+
+.box h3,
+.clinical-box h3{
+    color:#161d1b;
 }

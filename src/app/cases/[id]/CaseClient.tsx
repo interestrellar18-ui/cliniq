@@ -1,11 +1,11 @@
 "use client";
 
-
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ClinicalCase } from "@/data/cases";
 import "./case.css";
+
 
 
 
@@ -28,35 +28,66 @@ caseData
 const answerRef = useRef<HTMLDivElement>(null);
 
 
+const [status,setStatus] = useState("Em investigação");
+
+const [notaAberta,setNotaAberta] = useState(false);
+
+const [textoNota,setTextoNota] = useState("");
+
+const [notasCaso,setNotasCaso] = useState<any[]>([]);
+useEffect(()=>{
 
 
-const [status,setStatus] = useState(()=>{
+function carregarNotas(){
 
 
-const resolvidos = JSON.parse(
+const notas = JSON.parse(
 
-localStorage.getItem("casosResolvidos") || "[]"
+localStorage.getItem("notasClinicas") || "[]"
 
 );
 
 
 
-if(resolvidos.includes(caseData.id)){
+const desseCaso = notas.filter(
 
-return "Resolvido";
+(nota:any)=>nota.caseId === caseData.id
+
+);
+
+
+
+setNotasCaso(desseCaso);
+
 
 }
 
 
 
-return "Em investigação";
+carregarNotas();
 
 
-});
+window.addEventListener(
+"notasAtualizadas",
+carregarNotas
+);
+
+
+return ()=>{
+
+window.removeEventListener(
+
+"notasAtualizadas",
+
+carregarNotas
+
+);
+
+};
 
 
 
-
+},[caseData.id]);
 
 
 const solved =
@@ -166,9 +197,163 @@ setStatus("Em investigação");
 
 }
 
+function apagarNota(id:string){
+
+
+const notas = JSON.parse(
+
+localStorage.getItem("casoNotas") || "[]"
+
+);
+
+
+const atualizadas = notas.filter(
+
+(nota:any)=> nota.id !== id
+
+);
+
+
+localStorage.setItem(
+
+"casoNotas",
+
+JSON.stringify(atualizadas)
+
+);
+
+
+setNotasCaso(
+
+atualizadas.filter(
+
+(nota:any)=>nota.caseId === caseData.id
+
+)
+
+);
 
 
 
+const notasGerais = JSON.parse(
+
+localStorage.getItem("notasClinicas") || "[]"
+
+);
+
+
+
+const notasGeraisAtualizadas = notasGerais.filter(
+
+(nota:any)=> nota.id !== id
+
+);
+
+
+
+localStorage.setItem(
+
+"notasClinicas",
+
+JSON.stringify(notasGeraisAtualizadas)
+
+);
+
+window.dispatchEvent(new Event("notasAtualizadas"));
+
+
+}
+
+
+function salvarNotaCaso(){
+
+
+if(!textoNota.trim()) return;
+
+
+
+const nota = {
+
+id:crypto.randomUUID(),
+
+tipo:"caso",
+
+caseId:caseData.id,
+
+caseTitle:caseData.title,
+
+texto:textoNota,
+
+data:new Date().toLocaleDateString("pt-BR")
+
+};
+
+
+
+const notas = JSON.parse(
+
+localStorage.getItem("notasClinicas") || "[]"
+
+);
+
+
+
+notas.push(nota);
+
+
+
+localStorage.setItem(
+
+"notasClinicas",
+
+JSON.stringify(notas)
+
+);
+
+
+
+
+const notasCaso = JSON.parse(
+
+localStorage.getItem("casoNotas") || "[]"
+
+);
+
+
+
+notasCaso.push(nota);
+
+
+
+localStorage.setItem(
+
+"casoNotas",
+
+JSON.stringify(notasCaso)
+
+);
+
+
+const novasNotasCaso = [
+...notasCaso,
+nota
+];
+
+
+setNotasCaso(novasNotasCaso);
+
+
+setTextoNota("");
+
+setNotaAberta(false);
+
+
+window.dispatchEvent(
+new Event("notasAtualizadas")
+);
+
+
+}
 
 
 
@@ -356,16 +541,22 @@ RESOLVER
 
 </div>
 
+<button
+
+className="floating-note-button"
+
+onClick={()=>setNotaAberta(true)}
+
+>
+
+📝
+
+</button>
+
 
 
 
 </div>
-
-
-
-
-
-
 
 
 
@@ -565,12 +756,81 @@ key={index}
 
 </Section>
 
+<Section title="MINHAS ANOTAÇÕES">
+
+
+<div className="case-notes">
+
+
+{
+notasCaso.length === 0 ?
+
+
+<p>
+Nenhuma anotação registrada neste caso.
+</p>
+
+
+:
+
+
+notasCaso.map((nota)=>(
+
+
+<div 
+className="case-postit"
+key={nota.id}
+>
+
+
+<button
+
+className="delete-note"
+
+onClick={()=>apagarNota(nota.id)}
+
+>
+
+✖
+
+</button>
 
 
 
+<strong>
+📝 Nota do investigador
+</strong>
+
+<p>
+CASO #{nota.caseId}
+</p>
+
+
+<p>
+{nota.texto}
+</p>
 
 
 
+<span>
+{nota.data}
+</span>
+
+
+
+</div>
+
+
+))
+
+}
+
+
+
+</div>
+
+
+</Section>
 
 
 <Section title="HIPÓTESES DIAGNÓSTICAS">
@@ -839,6 +1099,74 @@ className="back"
 </Link>
 
 
+{
+notaAberta && (
+
+<div className="note-modal">
+
+
+<div className="note-window">
+
+
+<div className="note-window-header">
+
+NOTES.EXE
+
+<button
+onClick={()=>setNotaAberta(false)}
+>
+X
+</button>
+
+</div>
+
+
+
+<h3>
+CASO #{caseData.id}
+</h3>
+
+
+<p>
+{caseData.title}
+</p>
+
+
+
+<textarea
+
+placeholder="Escreva sua anotação clínica..."
+
+value={textoNota}
+
+onChange={(e)=>setTextoNota(e.target.value)}
+
+/>
+
+
+
+<button
+
+className="save-note"
+
+onClick={salvarNotaCaso}
+
+>
+
+SALVAR
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+)
+}
 
 
 

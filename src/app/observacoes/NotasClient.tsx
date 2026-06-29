@@ -17,14 +17,38 @@ const [notas,setNotas] = useState<any[]>([]);
 
 useEffect(()=>{
 
-const salvas = localStorage.getItem("notas");
 
-if(salvas){
-setNotas(JSON.parse(salvas));
-}
+const notasNormais = JSON.parse(
+
+localStorage.getItem("notas") || "[]"
+
+);
+
+
+
+const notasCasos = JSON.parse(
+
+localStorage.getItem("notasClinicas") || "[]"
+
+);
+
+
+
+const todas = [
+
+...notasNormais,
+
+...notasCasos
+
+];
+
+
+
+setNotas(todas);
+
+
 
 },[]);
-
 
 
 
@@ -32,12 +56,17 @@ function salvarNota(){
 
 if(!nota.trim()) return;
 
-
 const nova = {
-texto: nota,
-data: data || "SEM DATA"
-};
 
+id:crypto.randomUUID(),
+
+texto: nota,
+
+data: data || "SEM DATA",
+
+tipo:"geral"
+
+};
 
 const atualizadas = [
 ...notas,
@@ -65,24 +94,60 @@ setData("");
 
 function apagarNota(index:number){
 
+
+const removida = notas[index];
+
+
+
 const novas = notas.filter(
+
 (_,i)=>i !== index
+
 );
+
 
 
 setNotas(novas);
 
 
+
 localStorage.setItem(
+
 "notas",
-JSON.stringify(novas)
+
+JSON.stringify(
+
+novas.filter(
+
+(n)=>n.tipo==="geral"
+
+)
+
+)
+
 );
 
+
+
+localStorage.setItem(
+
+"notasClinicas",
+
+JSON.stringify(
+
+novas.filter(
+
+(n)=>n.tipo==="caso"
+
+)
+
+)
+
+);
+
+
+
 }
-
-
-
-
 
 return(
 
@@ -208,6 +273,17 @@ className="note-card"
 key={index}
 >
 
+  {
+item.tipo === "caso" && (
+
+<p className="case-id">
+
+CASO #{item.caseId} - {item.caseTitle}
+
+</p>
+
+)
+}
 
 <div className="note-header">
 
@@ -224,6 +300,24 @@ X
 
 
 </div>
+
+
+{
+item.tipo === "caso" && (
+
+<div className="case-info">
+
+CASO #{item.caseId}
+
+<br/>
+
+{item.caseTitle}
+
+</div>
+
+)
+
+}
 
 
 

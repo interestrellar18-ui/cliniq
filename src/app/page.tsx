@@ -196,7 +196,7 @@ className="new-case"
 
 
 <h3>
-NOVO CASO
+Solicitar Caso
 </h3>
 
 
