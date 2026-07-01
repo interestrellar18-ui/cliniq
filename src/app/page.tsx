@@ -126,10 +126,7 @@ title={item.title}
 
 
 
-<Folder id="003" title="Novo Caso" locked />
-<Folder id="004" title="Novo Caso" locked />
-<Folder id="005" title="Novo Caso" locked />
-<Folder id="006" title="Novo Caso" locked />
+<Folder id="00x" title="Caso vazio" locked />
 
 
 </div>

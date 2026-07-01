@@ -470,12 +470,6 @@ PRONTUÁRIO #{caseData.id}
 
 
 
-
-
-
-
-
-
 <div className="status-area">
 
 
