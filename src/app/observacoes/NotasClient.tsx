@@ -153,6 +153,14 @@ return(
 
 <main className="notes-page">
 
+  
+<button
+className="back-button"
+onClick={() => router.push("/")}
+>
+← VOLTAR AO ARQUIVO
+</button>
+
 
 <header className="notes-title">
 
@@ -344,12 +352,6 @@ CASO #{item.caseId}
 
 </section>
 
-<button
-className="back-button"
-onClick={() => router.push("/")}
->
-← VOLTAR AO ARQUIVO
-</button>
 
 </main>
 

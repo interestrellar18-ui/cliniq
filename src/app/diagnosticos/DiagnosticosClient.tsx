@@ -43,6 +43,17 @@ return(
 
 <main className="diagnostic-page">
 
+    
+<Link 
+href="/"
+className="back"
+>
+
+← VOLTAR AO ARQUIVO
+
+</Link>
+
+
 
 
 <header className="diagnostic-header">
@@ -204,17 +215,6 @@ item.exames.map((e)=>(
 </section>
 
 
-
-
-
-<Link 
-href="/"
-className="back"
->
-
-← VOLTAR AO ARQUIVO
-
-</Link>
 
 
 

@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+.dictionary-page{
+
+min-height:100vh;
+
+background:#061211;
+
+padding:40px;
+
+color:#d9d8c7;
+
+font-family:"VT323", monospace;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+/* FUNDO GRID */
+
+.dictionary-page::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+linear-gradient(
+rgba(127,197,181,.05) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(127,197,181,.05) 1px,
+transparent 1px
+);
+
+background-size:40px 40px;
+
+z-index:0;
+
+}
+
+
+
+/* BOTÃO VOLTAR */
+
+.dictionary-back{
+
+display:block;
+
+width:max-content;
+
+margin:0 auto 30px;
+
+padding:12px 30px;
+
+border:2px solid #7fc5b5;
+
+color:#7fc5b5;
+
+text-decoration:none;
+
+font-size:22px;
+
+letter-spacing:3px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+.dictionary-back:hover{
+
+background:#7fc5b5;
+
+color:#061211;
+
+}
+
+
+
+/* CABEÇALHO */
+
+.dictionary-header{
+
+text-align:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+
+.dictionary-header p{
+
+color:#7fc5b5;
+
+letter-spacing:6px;
+
+font-size:20px;
+
+}
+
+
+.dictionary-header h1{
+
+font-size:70px;
+
+letter-spacing:12px;
+
+margin:10px;
+
+color:#f4e9cf;
+
+}
+
+
+
+/* JANELA */
+
+.dictionary-window{
+
+position:relative;
+
+z-index:2;
+
+max-width:900px;
+
+margin:40px auto;
+
+background:#d9d3bd;
+
+color:#061211;
+
+border:3px solid #b9aa7c;
+
+padding:35px;
+
+box-shadow:
+
+8px 8px 0 #020807;
+
+}
+
+
+
+/* TITULO */
+
+.window-title{
+
+background:#b9aa7c;
+
+padding:12px;
+
+margin:-35px -35px 30px;
+
+font-size:28px;
+
+letter-spacing:5px;
+
+}
+
+
+
+/* PESQUISA */
+
+.dictionary-window input{
+
+width:100%;
+
+padding:15px;
+
+font-family:"VT323", monospace;
+
+font-size:25px;
+
+border:3px solid #061211;
+
+background:#f5edcf;
+
+}
+
+
+
+/* CARDS */
+
+.terms{
+
+margin-top:35px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+
+
+.term-card{
+
+background:#f1df76;
+
+border:3px solid #061211;
+
+padding:25px;
+
+box-shadow:
+
+5px 5px 0 #061211;
+
+}
+
+
+
+.term-card h2{
+
+margin:0;
+
+font-size:38px;
+
+color:#061211;
+
+}
+
+
+
+.term-card span{
+
+display:inline-block;
+
+margin:10px 0;
+
+padding:5px 15px;
+
+border:2px solid #061211;
+
+font-size:20px;
+
+}
+
+
+
+.term-card p{
+
+font-size:25px;
+
+line-height:1.4;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+
+.dictionary-page{
+
+padding:20px;
+
+}
+
+
+.dictionary-header h1{
+
+font-size:42px;
+
+letter-spacing:5px;
+
+}
+
+
+.dictionary-window{
+
+padding:20px;
+
+}
+
+
+.window-title{
+
+margin:-20px -20px 20px;
+
+}
+
+
+.term-card h2{
+
+font-size:30px;
+
+}
+
+
+}

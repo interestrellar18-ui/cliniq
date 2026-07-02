@@ -1546,3 +1546,34 @@ cursor:pointer;
 font-size:18px;
 
 }
+
+.top-back{
+
+display:block;
+
+width:max-content;
+
+margin-bottom:30px;
+
+font-size:22px;
+
+color:#d8d3bd;
+
+text-decoration:none;
+
+border:2px solid #b9aa7c;
+
+padding:10px 20px;
+
+background:#061211;
+
+}
+
+
+.top-back:hover{
+
+color:#7fc5b5;
+
+border-color:#7fc5b5;
+
+}

@@ -498,3 +498,242 @@ box-sizing:border-box;
 
 
 }
+
+.case-page,
+.evidence-id-page,
+.notes-page,
+.game{
+
+font-family:"VT323", monospace;
+
+}
+
+/* =========================
+   AJUSTES VISUAIS NOTAS
+========================= */
+
+
+/* BOTÃO VOLTAR */
+
+.back-button{
+
+display:block;
+
+margin:30px auto 50px;
+
+padding:15px 35px;
+
+border:2px solid #7fc5b5;
+
+background:#071211;
+
+color:#7fc5b5;
+
+font-family:"VT323", monospace;
+
+font-size:25px;
+
+letter-spacing:3px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.back-button:hover{
+
+background:#7fc5b5;
+
+color:#071211;
+
+}
+
+
+
+/* JANELA DE NOTAS */
+
+.mail-window{
+
+border:3px solid #b9aa7c;
+
+box-shadow:
+8px 8px 0 #020807;
+
+background:#d9d3bd;
+
+}
+
+
+
+
+/* BARRA DO PROGRAMA */
+
+.window-top{
+
+background:#b9aa7c;
+
+color:#071211;
+
+padding:12px 18px;
+
+font-size:24px;
+
+letter-spacing:3px;
+
+border-bottom:3px solid #071211;
+
+}
+
+
+
+
+/* CONTEÚDO */
+
+.window-content{
+
+padding:35px;
+
+}
+
+
+
+
+.field label{
+
+font-size:24px;
+
+color:#071211;
+
+letter-spacing:3px;
+
+}
+
+
+
+
+.field input,
+.field textarea{
+
+font-family:"VT323", monospace !important;
+
+font-size:22px;
+
+border:3px solid #071211;
+
+background:#f5edcf;
+
+padding:15px;
+
+}
+
+
+
+
+
+.field textarea{
+
+min-height:180px;
+
+}
+
+
+
+
+/* BOTÃO SALVAR */
+
+.save-button{
+
+margin-top:25px;
+
+padding:15px 40px;
+
+font-family:"VT323", monospace;
+
+font-size:25px;
+
+background:#071211;
+
+color:#7fc5b5;
+
+border:3px solid #7fc5b5;
+
+cursor:pointer;
+
+}
+
+
+.save-button:hover{
+
+background:#7fc5b5;
+
+color:#071211;
+
+}
+
+
+
+
+/* CARDS DAS NOTAS SALVAS */
+
+.note-card{
+
+margin-top:30px;
+
+background:#f1df76;
+
+border:3px solid #071211;
+
+padding:25px;
+
+box-shadow:
+6px 6px 0 #071211;
+
+font-size:24px;
+
+position:relative;
+
+}
+
+
+
+.note-card p{
+
+font-size:25px;
+
+}
+
+
+
+.note-header{
+
+border-bottom:2px dashed #071211;
+
+padding-bottom:10px;
+
+}
+
+
+
+
+.note-header button{
+
+position:absolute;
+
+right:15px;
+
+top:15px;
+
+background:#071211;
+
+color:#f1df76;
+
+border:none;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+

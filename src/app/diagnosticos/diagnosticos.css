@@ -454,3 +454,29 @@ padding:10px;
 
 
 }
+
+/* PADRÃO CLINIQ - FONTE GLOBAL */
+
+html,
+body,
+main,
+section,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button,
+a,
+input,
+textarea,
+label,
+li{
+
+font-family:"VT323", monospace !important;
+
+}

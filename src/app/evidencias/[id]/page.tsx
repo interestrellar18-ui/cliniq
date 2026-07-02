@@ -27,6 +27,8 @@ return(
 
 <main className="evidence-id-page">
 
+    
+
 <h1>
 EVIDÊNCIA NÃO ENCONTRADA
 </h1>
@@ -48,6 +50,14 @@ return(
 <main className="evidence-id-page">
 
 
+<Link
+href="/evidencias"
+className="back-id"
+>
+
+← VOLTAR PARA EVIDÊNCIAS
+
+</Link>
 <div className="grid-bg"></div>
 
 
@@ -218,17 +228,6 @@ ANALISADO
 
 </section>
 
-
-
-
-<Link
-href="/evidencias"
-className="back-id"
->
-
-← VOLTAR PARA EVIDÊNCIAS
-
-</Link>
 
 
 </main>

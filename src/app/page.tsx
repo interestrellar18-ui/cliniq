@@ -55,16 +55,11 @@ ARQUIVO DE INVESTIGAÇÃO CLÍNICA
 <section className="top-menu">
 
 
-<div className="tab active">
-CASOS
-</div>
-
-
 <Link 
 href="/evidencias"
 className="tab"
 >
-EVIDÊNCIAS
+SINTOMAS
 </Link>
 
 
@@ -85,11 +80,14 @@ className="tab"
 DIAGNÓSTICOS
 </Link>
 
+<Link
+href="/dicionario"
+className="tab"
+>
+DICIONÁRIO
+</Link>
 
 </section>
-
-
-
 
 
 <div className="main-area">

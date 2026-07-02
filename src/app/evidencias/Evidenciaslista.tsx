@@ -43,6 +43,17 @@ return(
 
 <main className="evidence-page">
 
+<Link
+
+href="/"
+
+className="back"
+
+>
+
+← VOLTAR AO ARQUIVO
+
+</Link>
 
 <div className="background-lines"/>
 
@@ -169,18 +180,6 @@ NENHUMA EVIDÊNCIA ENCONTRADA
 }
 
 
-
-<Link
-
-href="/"
-
-className="back"
-
->
-
-← VOLTAR AO ARQUIVO
-
-</Link>
 
 
 

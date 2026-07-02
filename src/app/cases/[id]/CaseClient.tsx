@@ -363,9 +363,17 @@ return (
 
 <main className="case-page">
 
+<Link
 
+href="/"
 
+className="back"
 
+>
+
+← VOLTAR AO ARQUIVO
+
+</Link>
 
 <div className="clipboard-bg">
 
@@ -1073,24 +1081,6 @@ Resolva o caso para liberar.
 
 </section>
 
-
-
-
-
-
-
-
-<Link
-
-href="/"
-
-className="back"
-
->
-
-← VOLTAR AO ARQUIVO
-
-</Link>
 
 
 {
