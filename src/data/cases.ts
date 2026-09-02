@@ -441,405 +441,366 @@ conduct:[
 },
 
 {
+  id: "003",
 
-id:"003",
+  title: "A febre que não passa",
 
-title:"Cefaleia de Início Súbito",
+  specialty: "Clínica Médica",
 
-specialty:"Neurologia",
+  difficulty: "Intermediário",
 
-difficulty:"Avançado",
-
-status:"Em investigação",
-
-
-patient:{
-
-name:"Lucas Ferreira Almeida",
-
-age:36,
-
-sex:"Masculino"
-
-},
+  status: "Em investigação",
 
 
-chiefComplaint:
-
-"Dor de cabeça intensa iniciada de forma súbita há aproximadamente 1 hora.",
-
-
-history:
-
-"Paciente previamente hígido relata cefaleia de forte intensidade, descrita como a pior dor de sua vida, iniciada durante esforço físico. Evoluiu com náuseas, vômitos e rigidez cervical. Nega trauma recente.",
+  patient: {
+    name: "Mariana Alves Ribeiro",
+    age: 29,
+    sex: "Feminino"
+  },
 
 
-physicalExam:[
-
-"Paciente agitado e com dor intensa",
-
-"Rigidez de nuca",
-
-"Fotofobia",
-
-"Pressão arterial elevada",
-
-"Alteração discreta do nível de consciência"
-
-],
+  chiefComplaint:
+    "Estou com febre há alguns dias e não sei o que está acontecendo.",
 
 
-exams:[
+  history:
+    "Paciente relata início de febre há aproximadamente 5 dias, inicialmente baixa, mas chegando a 39,1 °C nas últimas 48 horas. Refere calafrios, cansaço intenso e dor de cabeça. Relata redução do apetite e perda de aproximadamente 2 kg desde o início dos sintomas. Nega tosse, dor torácica, vômitos ou diarreia. Refere que a febre melhora temporariamente após uso de antitérmico, mas retorna algumas horas depois.",
 
-{
-  name:"Tomografia de crânio",
 
-  result:"Imagem sugestiva de sangramento no espaço subaracnoideo.",
+  physicalExam: [
 
-  media:[
+    "Paciente consciente, orientada, prostrada e febril",
+
+    "Pele quente",
+
+    "Mucosas levemente hipocoradas",
+
+    "Ausculta pulmonar sem alterações importantes",
+
+    "Taquicardia à ausculta cardíaca",
+
+    "Abdome flácido, sem dor significativa à palpação",
+
+    "Frequência respiratória aumentada"
+
+  ],
+
+
+  exams: [
+
     {
-      type:"image",
-      src:"/casos/003/tomografia003.png",
-      caption:"Tomografia craniana inicial."
+      name: "Hemograma",
+
+      result:
+        "Leucócitos: 17.800/mm³ | Neutrófilos: 88% | Hemoglobina: 12,1 g/dL | Plaquetas: 198.000/mm³"
+    },
+
+
+    {
+      name: "Proteína C reativa",
+
+      result:
+        "PCR: 18,6 mg/dL, significativamente elevada."
+    },
+
+
+    {
+      name: "Lactato",
+
+      result:
+        "Lactato: 2,4 mmol/L, discretamente aumentado."
+    },
+
+
+    {
+      name: "Função renal",
+
+      result:
+        "Ureia: 42 mg/dL | Creatinina: 1,2 mg/dL"
+    },
+
+
+    {
+      name: "Radiografia de tórax",
+
+      result:
+        "Sem infiltrados ou consolidações pulmonares."
+    },
+
+    {
+      name: "Sinais vitais",
+
+      result: "PA: 108/68 mmHg FC: 112 bpm FR: 24 irpm SpO₂: 96% Temperatura: 39,1 °C"
+    
     }
-  ]
 
-},
-{
+  ],
 
-name:"Punção lombar",
+  clues: [
 
-result:"Presença de sangue no líquor, confirmando suspeita de hemorragia."
+    "Febre há 5 dias",
 
-}
+    "Picos febris de até 39,1 °C",
 
-],
+    "Calafrios",
 
+    "Astenia e prostração",
 
+    "Perda ponderal recente",
 
+    "Taquicardia",
 
-clues:[
+    "Frequência respiratória aumentada",
 
-"Cefaleia em trovoada",
+    "Leucocitose com neutrofilia",
 
-"Início súbito",
+    "PCR elevada",
 
-"Pior cefaleia da vida",
+    "Lactato discretamente aumentado",
 
-"Rigidez de nuca",
+    "Ausência de foco pulmonar evidente"
 
-"Alteração neurológica"
-
-],
-
-
-hypotheses:[
-
-"Hemorragia subaracnoidea",
-
-"Meningite",
-
-"Enxaqueca complicada",
-
-"Trombose venosa cerebral"
-
-],
+  ],
 
 
-diagnosis:
+  hypotheses: [
 
-"Hemorragia subaracnoidea por ruptura de aneurisma cerebral.",
+    "Processo infeccioso bacteriano",
 
+    "Síndrome infecciosa sistêmica",
 
-expectedAnswer:{
+    "Foco infeccioso ainda não identificado",
 
+    "Infecção viral prolongada"
 
-summary:
-
-"O quadro apresenta sinais clássicos de uma cefaleia secundária grave, principalmente pela característica súbita e intensa associada a sinais meníngeos.",
-
-
-discussion:
-
-"A cefaleia em trovoada deve ser considerada uma emergência neurológica. A investigação inicial deve ser feita com tomografia de crânio e, quando necessário, complementada com análise do líquor.",
+  ],
 
 
-reasoning:[
-
-"Reconhecer características de cefaleia de alerta.",
-
-"Relacionar início súbito com possibilidade de sangramento intracraniano.",
-
-"Identificar rigidez de nuca como sinal de irritação meníngea.",
-
-"Investigar causas secundárias antes de considerar cefaleia primária."
-
-],
+  diagnosis:
+    "Síndrome infecciosa sistêmica com provável foco bacteriano ainda não identificado.",
 
 
-conduct:[
+  expectedAnswer: {
 
-"Realizar avaliação neurológica urgente.",
-
-"Solicitar neuroimagem.",
-
-"Controlar pressão arterial.",
-
-"Encaminhar para tratamento especializado."
-
-]
+    summary:
+      "Paciente apresenta quadro febril associado a taquicardia, taquipneia, leucocitose com neutrofilia e elevação importante da PCR, sugerindo processo infeccioso sistêmico.",
 
 
-}
-
-},
-
-{
-
-id:"004",
-
-title:"Alteração Progressiva da Memória",
-
-specialty:"Neurologia",
-
-difficulty:"Intermediário",
-
-status:"Em investigação",
+    discussion:
+      "A presença de febre persistente, calafrios, prostração e alterações dos sinais vitais deve levantar suspeita de infecção com repercussão sistêmica. A leucocitose com neutrofilia e a elevação da PCR reforçam a possibilidade de etiologia bacteriana. A ausência de alterações na radiografia de tórax torna um foco pulmonar menos provável, sendo necessária investigação de outros possíveis focos infecciosos.",
 
 
-patient:{
+    reasoning: [
 
-name:"Helena Duarte Martins",
+      "Reconhecer sinais clínicos de um processo infeccioso sistêmico.",
 
-age:67,
+      "Interpretar leucocitose associada à neutrofilia.",
 
-sex:"Feminino"
+      "Valorizar taquicardia e frequência respiratória aumentada.",
+
+      "Relacionar a elevação da PCR à presença de processo inflamatório.",
+
+      "Interpretar o lactato discretamente aumentado no contexto clínico.",
+
+      "Investigar ativamente um possível foco infeccioso."
+
+    ],
+
+
+    conduct: [
+
+      "Realizar avaliação clínica completa e reavaliar sinais vitais.",
+
+      "Investigar possíveis focos infecciosos por meio de anamnese e exame físico direcionados.",
+
+      "Considerar coleta de culturas conforme suspeita clínica.",
+
+      "Monitorizar evolução clínica e parâmetros laboratoriais.",
+
+      "Iniciar tratamento específico conforme identificação do foco e avaliação clínica."
+
+    ]
+
+  }
 
 },
 
-
-
-chiefComplaint:
-
-"Esquecimentos frequentes e dificuldade para realizar atividades habituais há aproximadamente 1 ano.",
-
-
-
-history:
-
-"Paciente apresenta perda progressiva de memória recente, repetição das mesmas perguntas e dificuldade para organizar tarefas diárias. Familiares relatam mudança discreta de comportamento e episódios de desorientação em locais conhecidos. Nega episódios súbitos de perda de força ou alteração da fala.",
-
-
-
-physicalExam:[
-
-"Paciente consciente e colaborativa",
-
-"Dificuldade em recordar informações recentes",
-
-"Desorientação temporal leve",
-
-"Déficit cognitivo progressivo"
-
-],
-
-
-
-exams:[
-
-
 {
+  id: "004",
 
-name:"Teste cognitivo",
+  title: "Ele só está cansado?",
 
-result:"Redução do desempenho em memória recente e funções executivas."
+  specialty: "Clínica Médica",
 
-},
+  difficulty: "Avançado",
 
+  status: "Em investigação",
 
 
-{
+  patient: {
+    name: "Carlos Eduardo Martins",
+    age: 58,
+    sex: "Masculino"
+  },
 
-name:"Ressonância magnética de encéfalo",
 
-result:"Atrofia predominante em regiões temporais mediais, sugestiva de processo neurodegenerativo.",
+  chiefComplaint:
+    "Estou cansado e com falta de ar quando faço esforço.",
 
 
-media:[
+  history:
+    "Paciente relata cansaço progressivo há aproximadamente 3 semanas. Inicialmente apresentava falta de ar apenas durante atividades físicas mais intensas. Nos últimos 4 dias, passou a apresentar dispneia ao realizar atividades habituais. Refere tosse seca ocasional e sensação de respiração acelerada. Nega febre e dor torácica. Relata perda de aproximadamente 3 kg no último mês, sem mudança intencional na alimentação. É hipertenso há 8 anos, com uso irregular da medicação anti-hipertensiva. Ex-tabagista, com histórico de tabagismo durante aproximadamente 20 anos.",
 
-{
 
-type:"image",
+  physicalExam: [
 
-src:"/casos/004/ressonancia004.png",
+    "Paciente consciente e orientado",
 
-caption:"Ressonância magnética de encéfalo."
+    "Respiração acelerada durante a avaliação",
 
-}
+    "Estertores discretos em bases pulmonares",
 
-]
+    "Ritmo cardíaco regular",
 
-},
+    "Sem edema importante de membros inferiores",
 
+    "PA: 146/92 mmHg",
 
+    "FC: 104 bpm",
 
-{
+    "FR: 30 irpm",
 
-name:"Exames laboratoriais",
+    "SpO₂: 93%",
 
-result:"Sem alterações metabólicas significativas que justifiquem o quadro."
+    "Temperatura: 36,7 °C"
 
-}
+  ],
 
 
-],
+  exams: [
 
+    {
+      name: "Hemograma",
 
+      result:
+        "Leucócitos: 9.200/mm³ | Hemoglobina: 11,2 g/dL | Hematócrito: 34% | Plaquetas: 245.000/mm³"
+    },
 
-clues:[
 
-"Idade avançada",
+    {
+      name: "Gasometria arterial",
 
-"Perda progressiva de memória recente",
+      result:
+        "pH: 7,46 | PaCO₂: 31 mmHg | PaO₂: 68 mmHg | HCO₃⁻: 22 mEq/L"
+    },
 
-"Repetição de perguntas",
 
-"Alteração funcional nas atividades diárias",
+    {
+      name: "Eletrólitos",
 
-"Atrofia temporal medial na imagem"
+      result:
+        "Sódio: 138 mEq/L | Potássio: 4,1 mEq/L"
+    },
 
-],
 
+    {
+      name: "Radiografia de tórax",
 
+      result:
+        "Aumento discreto da trama vascular pulmonar e opacidades intersticiais bibasais."
+    }
 
-hypotheses:[
+  ],
 
-"Doença de Alzheimer",
 
-"Demência vascular",
+  clues: [
 
-"Depressão com prejuízo cognitivo",
+    "Dispneia progressiva",
 
-"Demência por corpos de Lewy"
+    "Tosse seca",
 
-],
+    "Perda ponderal recente",
 
+    "História de tabagismo",
 
+    "Hipertensão arterial com tratamento irregular",
 
-diagnosis:
+    "Taquicardia",
 
-"Doença de Alzheimer provável.",
+    "Frequência respiratória de 30 irpm",
 
+    "SpO₂ de 93%",
 
+    "PaO₂ reduzida",
 
-expectedAnswer:{
+    "Estertores bibasais",
 
+    "Alterações intersticiais na radiografia de tórax"
 
-summary:
+  ],
 
-"O quadro apresenta características compatíveis com síndrome demencial progressiva, principalmente pelo comprometimento inicial da memória recente associado à perda funcional.",
 
+  hypotheses: [
 
+    "Comprometimento respiratório",
 
-discussion:
+    "Doença pulmonar intersticial",
 
-"A doença de Alzheimer é a principal causa de demência em idosos. O diagnóstico é clínico, baseado na história, avaliação cognitiva e exclusão de causas reversíveis. Alterações em regiões temporais mediais podem apoiar a hipótese diagnóstica.",
+    "Insuficiência cardíaca",
 
+    "Doença pulmonar relacionada ao tabagismo",
 
+    "Insuficiência respiratória hipoxêmica inicial"
 
-reasoning:[
+  ],
 
-"Reconhecer padrão progressivo de declínio cognitivo.",
 
-"Diferenciar alterações normais do envelhecimento de demência.",
+  diagnosis:
+    "Insuficiência respiratória hipoxêmica inicial, com necessidade de investigação da causa pulmonar ou cardiovascular.",
 
-"Associar comprometimento de memória recente com doença de Alzheimer.",
 
-"Excluir causas reversíveis de déficit cognitivo."
+  expectedAnswer: {
 
-],
+    summary:
+      "Paciente apresenta dispneia progressiva associada a taquipneia, hipoxemia, redução da PaO₂ e alterações intersticiais na radiografia de tórax, indicando comprometimento respiratório que necessita de investigação.",
 
 
+    discussion:
+      "Apesar de aparentemente estável e consciente, o paciente apresenta sinais de alerta importantes. A frequência respiratória de 30 irpm, associada à SpO₂ de 93% e PaO₂ de 68 mmHg, demonstra alteração da oxigenação. A gasometria também apresenta redução da PaCO₂, compatível com hiperventilação. Os estertores bibasais e as opacidades intersticiais na radiografia sugerem comprometimento pulmonar, enquanto o aumento da trama vascular também exige correlação com possível componente cardiovascular.",
 
-conduct:[
 
-"Realizar avaliação neuropsicológica.",
+    reasoning: [
 
-"Investigar causas secundárias de alteração cognitiva.",
+      "Reconhecer taquipneia como sinal de alerta clínico.",
 
-"Iniciar acompanhamento neurológico.",
+      "Interpretar SpO₂ e PaO₂ reduzidas como evidências de hipoxemia.",
 
-"Orientar familiares sobre suporte e segurança do paciente."
+      "Analisar a gasometria arterial e reconhecer padrão de hiperventilação.",
 
-]
+      "Correlacionar estertores pulmonares com as alterações radiográficas.",
 
+      "Considerar antecedentes de hipertensão e tabagismo na investigação.",
 
-}
+      "Não subestimar um paciente aparentemente estável com alterações respiratórias importantes."
 
-},
+    ],
 
-{
 
-id:"005",
+    conduct: [
 
-title:"Dispneia Progressiva",
+      "Realizar avaliação clínica e respiratória completa.",
 
-specialty:"Cardiologia",
+      "Monitorizar frequência respiratória e saturação de oxigênio.",
 
-difficulty:"Intermediário",
+      "Investigar a causa da hipoxemia e das alterações intersticiais.",
 
-status:"Em investigação",
+      "Considerar exames complementares cardiológicos e pulmonares conforme suspeita clínica.",
 
+      "Avaliar necessidade de oxigenoterapia conforme evolução e critérios clínicos."
 
+    ]
 
-patient:{
-
-name:"Ricardo Alves Martins",
-
-age:67,
-
-sex:"Masculino"
-
-},
-
-
-
-chiefComplaint:
-
-"Falta de ar aos esforços há cerca de 3 meses.",
-
-
-
-history:
-
-"Paciente relata dispneia progressiva, inicialmente aos grandes esforços, evoluindo para atividades habituais. Refere ortopneia, necessidade de dormir com vários travesseiros, episódios de falta de ar durante a madrugada e aumento do volume das pernas ao final do dia. Possui histórico de hipertensão arterial sistêmica há 20 anos e baixa adesão ao tratamento.",
-
-
-
-physicalExam:[
-
-"Dispneia ao falar frases longas",
-
-"Edema bilateral de membros inferiores (++/4+)",
-
-"Estertores crepitantes em bases pulmonares",
-
-"Turgência jugular",
-
-"Frequência cardíaca aumentada"
-
-],
-
-
-
-exams:[
-
-
-{
-
-name:"Ecocardiograma",
-
-result:"Redução da fração de ejeção ventricular esquerda, sugerindo disfunção sistólica."
+  }
 
 },
 
@@ -847,121 +808,201 @@ result:"Redução da fração de ejeção ventricular esquerda, sugerindo disfun
 
 {
 
-name:"Radiografia de tórax",
+  id:"005",
 
-result:"Aumento da área cardíaca e sinais de congestão pulmonar.",
+  title:"Não é só uma dor de cabeça",
 
+  specialty:"Clínica Médica / Neurologia",
 
-media:[
+  difficulty:"Avançado",
 
-{
+  status:"Em investigação",
 
-type:"image",
 
-src:"/casos/005/rxtorax005.png",
+  patient:{
 
-caption:"Radiografia de tórax evidenciando cardiomegalia e congestão pulmonar."
+    name:"Lucas Henrique Moreira",
 
-}
+    age:23,
 
-]
+    sex:"Masculino"
 
-},
+  },
 
 
+  chiefComplaint:
 
-{
+  "Cefaleia súbita e extremamente intensa iniciada há aproximadamente 18 horas.",
 
-name:"BNP",
 
-result:"Peptídeo natriurético cerebral elevado, compatível com sobrecarga cardíaca."
+  history:
 
-}
+  "Paciente previamente hígido relata início súbito de cefaleia intensa há aproximadamente 18 horas. Descreve a dor como a pior dor de cabeça da vida, com intensidade 9/10. O quadro teve início durante atividade física. Desde então, apresenta náuseas, vômitos e fotofobia. Refere rigidez na região do pescoço. Nega história prévia de cefaleias semelhantes e não utilizou medicamentos antes da chegada ao serviço.",
 
 
-],
+  physicalExam:[
 
+    "Paciente consciente e orientado, porém bastante incomodado pela dor",
 
+    "Fotofobia presente",
 
-clues:[
+    "Rigidez de nuca",
 
-"Dispneia progressiva",
+    "Pupilas isocóricas e fotorreagentes",
 
-"Ortopneia",
+    "Sem déficit motor evidente",
 
-"Edema periférico",
+    "Ausculta cardíaca sem alterações significativas",
 
-"Cardiomegalia",
+    "Ausculta pulmonar sem alterações significativas"
 
-"Fração de ejeção reduzida"
+  ],
 
-],
 
+  exams:[
 
 
-hypotheses:[
+    {
 
-"Insuficiência cardíaca congestiva",
+      name:"Hemograma",
 
-"Doença pulmonar crônica",
+      result:"Leucócitos: 13.600/mm³ | Neutrófilos: 82% | Hemoglobina: 14,8 g/dL | Plaquetas: 276.000/mm³"
 
-"Embolia pulmonar",
+    },
 
-"Síndrome nefrótica"
 
-],
+    {
 
+      name:"Proteína C reativa",
 
+      result:"PCR: 7,2 mg/dL, apresentando elevação discreta."
 
-diagnosis:
+    },
 
-"Insuficiência cardíaca com fração de ejeção reduzida (ICFEr).",
 
+    {
 
+      name:"Eletrólitos",
 
-expectedAnswer:{
+      result:"Sódio: 137 mEq/L | Potássio: 4,0 mEq/L"
 
+    },
 
-summary:
 
-"Quadro compatível com insuficiência cardíaca, caracterizado por sintomas de congestão pulmonar e sistêmica associados à redução da função cardíaca.",
+    {
 
+      name:"Tomografia computadorizada de crânio",
 
+      result:"Presença de material hiperdenso nas cisternas basais, sugestivo de sangue no espaço subaracnoideo.",
 
-discussion:
+      media:[
 
-"A combinação de dispneia, ortopneia, edema periférico e alterações no ecocardiograma indica falência da capacidade do coração de manter débito adequado. A hipertensão crônica é um importante fator de risco para remodelamento cardíaco e insuficiência ventricular.",
+        {
 
+          type:"image",
 
+          src:"/casos/005/tc005.png",
 
-reasoning:[
+          caption:"Tomografia de crânio evidenciando sangue nas cisternas basais."
 
-"Reconhecer sinais clínicos de insuficiência cardíaca.",
+        }
 
-"Identificar sintomas de congestão pulmonar e sistêmica.",
+      ]
 
-"Relacionar hipertensão crônica com disfunção ventricular.",
+    }
 
-"Interpretar redução da fração de ejeção como alteração cardíaca funcional."
 
-],
+  ],
 
 
+  clues:[
 
-conduct:[
+    "Cefaleia súbita e de forte intensidade",
 
-"Realizar avaliação cardiológica completa.",
+    "Pior dor de cabeça da vida",
 
-"Iniciar tratamento medicamentoso conforme classificação clínica.",
+    "Início durante esforço físico",
 
-"Controlar fatores de risco cardiovascular.",
+    "Náuseas e vômitos",
 
-"Orientar redução de sódio e acompanhamento contínuo."
+    "Fotofobia",
 
-]
+    "Rigidez de nuca",
 
+    "Alteração da frequência cardíaca",
 
-}
+    "Leucocitose",
+
+    "Sangue nas cisternas basais na tomografia"
+
+  ],
+
+
+  hypotheses:[
+
+    "Hemorragia subaracnoidea",
+
+    "Meningite",
+
+    "Enxaqueca com sinais atípicos",
+
+    "Hemorragia intracraniana"
+
+  ],
+
+
+  diagnosis:
+
+  "Hemorragia subaracnoidea."
+
+
+  ,
+
+
+  expectedAnswer:{
+
+
+    summary:
+
+    "Quadro altamente sugestivo de hemorragia subaracnoidea, caracterizado por cefaleia súbita e extremamente intensa, associada a vômitos, fotofobia e rigidez de nuca, com confirmação por tomografia de crânio.",
+
+
+    discussion:
+
+    "A cefaleia súbita e intensa, descrita como a pior dor de cabeça da vida e iniciada durante esforço físico, representa um importante sinal de alerta para hemorragia subaracnoidea. A presença de rigidez de nuca, vômitos e fotofobia sugere irritação meníngea. A tomografia demonstrando material hiperdenso nas cisternas basais confirma a presença de sangue no espaço subaracnoideo e torna essa hipótese prioritária.",
+
+
+    reasoning:[
+
+      "Reconhecer a cefaleia súbita e intensa como sinal de alerta neurológico.",
+
+      "Valorizar o início da dor durante esforço físico.",
+
+      "Identificar sinais de irritação meníngea, como rigidez de nuca e fotofobia.",
+
+      "Interpretar a presença de sangue nas cisternas basais na tomografia.",
+
+      "Diferenciar hemorragia subaracnoidea de outras causas de cefaleia aguda."
+
+    ],
+
+
+    conduct:[
+
+      "Realizar avaliação neurológica imediata.",
+
+      "Manter monitorização clínica e neurológica.",
+
+      "Acionar avaliação especializada em Neurologia/Neurocirurgia.",
+
+      "Investigar a origem do sangramento, especialmente aneurisma cerebral.",
+
+      "Instituir medidas de suporte e manejo das complicações conforme avaliação especializada."
+
+    ]
+
+
+  }
 
 },
 
