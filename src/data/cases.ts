@@ -80,7 +80,7 @@ export const cases:ClinicalCase[] = [
 
 id:"001",
 
-title:"Síndrome Febril Prolongada",
+title:"CASO 01",
 
 specialty:"Clínica Médica",
 
@@ -259,7 +259,7 @@ conduct:[
 
 id:"002",
 
-title:"Dor Torácica Aguda",
+title:"CASO 02",
 
 specialty:"Cardiologia",
 
@@ -443,7 +443,7 @@ conduct:[
 {
   id: "003",
 
-  title: "A febre que não passa",
+  title: "CASO 03",
 
   specialty: "Clínica Médica",
 
@@ -628,7 +628,7 @@ conduct:[
 {
   id: "004",
 
-  title: "Ele só está cansado?",
+  title: "CASO 04",
 
   specialty: "Clínica Médica",
 
@@ -810,7 +810,7 @@ conduct:[
 
   id:"005",
 
-  title:"Não é só uma dor de cabeça",
+  title:"CASO 05",
 
   specialty:"Clínica Médica / Neurologia",
 
@@ -1004,6 +1004,363 @@ conduct:[
 
   }
 
+},
+
+{
+
+id:"006",
+
+title:"CASO 06",
+
+specialty:"Neurologia",
+
+difficulty:"Intermediário",
+
+status:"Em investigação",
+
+
+
+patient:{
+
+name:"Helena Maria Duarte",
+
+age:72,
+
+sex:"Feminino"
+
+},
+
+
+
+chiefComplaint:
+
+"Esquecimentos frequentes e dificuldade para realizar atividades do dia a dia há aproximadamente dois anos.",
+
+
+
+history:
+
+"Paciente acompanhada pela filha, que relata piora progressiva da memória há cerca de dois anos. Inicialmente, apresentava esquecimentos de compromissos e repetia algumas perguntas ao longo do dia. Nos últimos meses, passou a esquecer nomes de pessoas próximas, perder objetos dentro de casa e apresentar dificuldade para administrar as próprias finanças e organizar as medicações. Em algumas ocasiões, esqueceu o caminho de volta para casa após sair para locais que frequentava habitualmente. A filha relata que a paciente ainda reconhece familiares próximos, mas apresenta dificuldade para recordar acontecimentos recentes. Nega início súbito dos sintomas, episódios de perda de consciência ou déficits motores focais.",
+
+
+
+physicalExam:[
+
+"Paciente consciente e colaborativa",
+
+"Desorientação parcial quanto à data",
+
+"Dificuldade para recordar informações recentes",
+
+"Discurso coerente, porém com repetição de perguntas",
+
+"Força muscular preservada nos quatro membros",
+
+"Reflexos sem alterações significativas",
+
+"Sem déficit neurológico focal evidente"
+
+],
+
+
+
+exams:[
+
+
+{
+
+name:"Avaliação cognitiva",
+
+result:"Comprometimento predominante da memória episódica, com dificuldade para recordar informações após alguns minutos e alterações em orientação temporal."
+
+},
+
+
+
+{
+  name:"Ressonância magnética de encéfalo",
+
+  result:
+    "Atrofia cerebral predominante em regiões temporais mediais, incluindo formação hipocampal, bilateralmente.",
+
+  media:[
+
+    {
+      type:"image",
+
+      src:"/casos/006/rm-alzheimer006.png",
+
+      caption:
+        "Ressonância magnética de encéfalo evidenciando atrofia predominante nas regiões temporais mediais."
+    }
+
+  ]
+
+},
+
+
+
+{
+
+name:"Exames laboratoriais",
+
+result:"Hemograma, eletrólitos, função renal, função hepática, vitamina B12 e TSH sem alterações relevantes."
+
+}
+
+
+],
+
+
+
+clues:[
+
+"Perda progressiva da memória",
+
+"Comprometimento da memória episódica",
+
+"Repetição de perguntas",
+
+"Dificuldade para realizar atividades instrumentais",
+
+"Desorientação temporal",
+
+"Perda de objetos",
+
+"Desorientação espacial ocasional",
+
+"Atrofia temporal medial bilateral",
+
+"Ausência de causa metabólica evidente"
+
+],
+
+
+
+hypotheses:[
+
+"Doença de Alzheimer",
+
+"Demência vascular",
+
+"Demência com corpos de Lewy",
+
+"Demência frontotemporal",
+
+"Depressão com comprometimento cognitivo"
+
+],
+
+
+
+diagnosis:
+
+"Doença de Alzheimer com transtorno neurocognitivo maior de provável etiologia degenerativa.",
+
+
+
+expectedAnswer:{
+
+
+summary:
+
+"Quadro compatível com doença de Alzheimer, caracterizado por comprometimento cognitivo progressivo e insidioso, inicialmente predominante na memória episódica e posteriormente associado à perda de autonomia para atividades do cotidiano.",
+
+
+
+discussion:
+
+"A doença de Alzheimer é uma doença neurodegenerativa progressiva que frequentemente se manifesta inicialmente por prejuízo da memória episódica. A evolução gradual dos sintomas, a dificuldade crescente para realizar atividades instrumentais da vida diária e a ausência de alterações laboratoriais que expliquem o quadro sustentam a hipótese de um transtorno neurocognitivo maior de provável etiologia degenerativa. A atrofia predominante nas regiões temporais mediais, especialmente no hipocampo, é compatível com o quadro clínico.",
+
+
+
+reasoning:[
+
+"Reconhecer o padrão progressivo e insidioso do comprometimento cognitivo.",
+
+"Identificar a memória episódica como domínio inicialmente mais comprometido.",
+
+"Relacionar a perda de autonomia funcional à presença de transtorno neurocognitivo maior.",
+
+"Considerar os diagnósticos diferenciais de demência.",
+
+"Interpretar a atrofia temporal medial como achado compatível com doença de Alzheimer."
+
+],
+
+
+
+conduct:[
+
+"Realizar avaliação cognitiva e funcional completa.",
+
+"Investigar causas potencialmente reversíveis de comprometimento cognitivo.",
+
+"Avaliar segurança e capacidade para atividades instrumentais da vida diária.",
+
+"Orientar familiares e cuidadores sobre a progressão da doença.",
+
+"Considerar tratamento farmacológico e não farmacológico conforme avaliação especializada.",
+
+"Realizar acompanhamento neurológico periódico."
+
+]
+
+
+}
+
+},
+
+{
+  id: "007",
+  title: "CASO 07",
+  specialty: "Neurologia",
+  difficulty: "Avançado",
+  status: "Em investigação",
+
+  patient: {
+    name: "João Carlos Mendes",
+    age: 68,
+    sex: "Masculino"
+  },
+
+  chiefComplaint:
+    "Fraqueza súbita no lado direito do corpo e dificuldade para falar há aproximadamente 1 hora.",
+
+  history:
+    "Paciente de 68 anos, hipertenso e diabético, é trazido pela esposa ao pronto atendimento após apresentar início súbito de dificuldade para falar e perda de força no lado direito do corpo há aproximadamente 1 hora. Segundo a acompanhante, o paciente estava conversando normalmente durante o café da manhã quando, de forma abrupta, deixou cair um objeto da mão direita e passou a apresentar fala incompreensível. Não houve perda de consciência, crise convulsiva ou trauma. A esposa relata que o paciente faz uso irregular das medicações para hipertensão e diabetes. É ex-tabagista e possui histórico de dislipidemia.",
+
+  physicalExam: [
+    "Paciente consciente, porém com dificuldade importante para se comunicar",
+    "Hemiparesia direita, predominando em membro superior",
+    "Paralisia facial central à direita",
+    "Afasia de expressão",
+    "Desvio do olhar conjugado para a esquerda",
+    "Sensibilidade parcialmente reduzida em hemicorpo direito",
+    "Reflexos profundos discretamente aumentados à direita",
+    "Sem sinais de trauma craniano"
+  ],
+
+  exams: [
+  {
+    name: "Glicemia capilar",
+    result: "126 mg/dL."
+  },
+
+  {
+    name: "Tomografia computadorizada de crânio sem contraste",
+    result:
+      "Ausência de hemorragia intracraniana. Pequena área de hipodensidade insular à esquerda, com discreta perda da diferenciação entre substância cinzenta e branca, compatível com sinais iniciais de isquemia.",
+    media: [
+      {
+        type: "image",
+        src: "/casos/007/tc007.png",
+        caption:
+          "Tomografia computadorizada de crânio sem contraste."
+      }
+    ]
+  },
+
+  {
+    name: "Angiotomografia cerebral",
+    result:
+      "Oclusão de ramo proximal da artéria cerebral média esquerda.",
+    media: [
+      {
+        type: "image",
+        src: "/casos/007/angiotc007.png",
+        caption:
+          "Angiotomografia evidenciando oclusão de ramo proximal da artéria cerebral média esquerda."
+      }
+    ]
+  },
+
+  {
+    name: "Ressonância magnética de encéfalo",
+    result:
+      "Área de restrição à difusão em território da artéria cerebral média esquerda, compatível com infarto agudo.",
+    media: [
+      {
+        type: "image",
+        src: "/casos/007/rm007.png",
+        caption:
+          "Ressonância magnética em sequência DWI demonstrando área de infarto agudo."
+      }
+    ]
+  },
+
+  {
+    name: "Eletrocardiograma",
+    result:
+      "Fibrilação atrial, com resposta ventricular controlada.",
+    media: [
+      {
+        type: "image",
+        src: "/casos/007/ecg007.png",
+        caption:
+          "Eletrocardiograma demonstrando fibrilação atrial."
+      }
+    ]
+  },
+
+  {
+    name: "Hemograma e coagulograma",
+    result:
+      "Sem alterações relevantes que contraindiquem, isoladamente, avaliação para terapia de reperfusão."
+  }
+],
+
+  clues: [
+    "Déficit neurológico focal de início súbito",
+    "Hemiparesia direita",
+    "Paralisia facial central à direita",
+    "Afasia",
+    "Desvio conjugado do olhar para a esquerda",
+    "Início dos sintomas há aproximadamente 1 hora",
+    "Ausência de hemorragia na tomografia",
+    "Oclusão de ramo proximal da artéria cerebral média esquerda",
+    "Fibrilação atrial",
+    "História de hipertensão, diabetes e dislipidemia"
+  ],
+
+  hypotheses: [
+    "AVC isquêmico",
+    "AVC hemorrágico",
+    "Crise epiléptica com paralisia de Todd",
+    "Hipoglicemia",
+    "Tumor cerebral"
+  ],
+
+  diagnosis:
+    "Acidente vascular cerebral isquêmico agudo em território da artéria cerebral média esquerda, associado a oclusão arterial e provável mecanismo cardioembólico.",
+
+  expectedAnswer: {
+    summary:
+      "Quadro de déficit neurológico focal súbito, caracterizado principalmente por afasia e hemiparesia direita, associado à oclusão de ramo proximal da artéria cerebral média esquerda. A tomografia exclui hemorragia intracraniana e a presença de fibrilação atrial sugere mecanismo cardioembólico.",
+
+    discussion:
+      "O acidente vascular cerebral isquêmico ocorre quando há interrupção do fluxo sanguíneo cerebral, levando à redução do fornecimento de oxigênio e glicose ao tecido nervoso. Neste caso, o início súbito dos sintomas, a presença de déficit neurológico focal e os achados de imagem apontam para uma lesão vascular no hemisfério cerebral esquerdo. A associação entre afasia e déficit motor predominante à direita é compatível com comprometimento do território da artéria cerebral média esquerda. A angiotomografia demonstra uma oclusão arterial, enquanto a fibrilação atrial fornece uma possível fonte cardioembólica.",
+
+    reasoning: [
+      "Reconhecer o início súbito de déficit neurológico focal como sugestivo de evento cerebrovascular agudo.",
+      "Relacionar a hemiparesia direita e a afasia ao comprometimento do hemisfério cerebral esquerdo.",
+      "Interpretar a tomografia sem hemorragia como compatível com investigação inicial de AVC isquêmico.",
+      "Identificar a oclusão da artéria cerebral média na angiotomografia.",
+      "Reconhecer a fibrilação atrial como importante fator associado ao mecanismo cardioembólico.",
+      "Avaliar rapidamente a possibilidade de terapia de reperfusão conforme tempo de início, extensão do déficit, imagem e critérios de elegibilidade."
+    ],
+
+    conduct: [
+      "Acionar imediatamente protocolo de atendimento ao AVC agudo.",
+      "Determinar com precisão o horário do último momento em que o paciente foi visto bem.",
+      "Realizar avaliação neurológica estruturada e quantificação da gravidade do déficit.",
+      "Monitorizar sinais vitais, glicemia, oxigenação e ritmo cardíaco.",
+      "Avaliar elegibilidade para terapia de reperfusão intravenosa dentro da janela terapêutica aplicável.",
+      "Considerar terapia endovascular diante de oclusão de grande vaso ou oclusão arterial passível de tratamento, conforme critérios de imagem e elegibilidade.",
+      "Após a fase aguda, investigar a etiologia cardioembólica e realizar prevenção secundária.",
+      "Iniciar abordagem dos fatores de risco vascular e planejamento de reabilitação multidisciplinar."
+    ]
+  }
 },
 
 ];
