@@ -1577,3 +1577,20 @@ color:#7fc5b5;
 border-color:#7fc5b5;
 
 }
+
+.expected-diagnosis {
+  margin-bottom: 24px;
+  padding: 18px 20px;
+  border-left: 4px solid #7c5cff;
+  background: rgba(124, 92, 255, 0.08);
+  border-radius: 10px;
+}
+
+.expected-diagnosis h3 {
+  margin: 0 0 8px;
+}
+
+.expected-diagnosis p {
+  margin: 0;
+  font-weight: 600;
+}

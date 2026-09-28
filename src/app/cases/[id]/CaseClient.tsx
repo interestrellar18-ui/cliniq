@@ -910,14 +910,17 @@ solved ? (
 
 <div>
 
-
-
 <h3>
-
-Discussão clínica
-
+  Diagnóstico
 </h3>
 
+<p className="expected-diagnosis">
+  {caseData.diagnosis}
+</p>
+
+<h3>
+  Discussão clínica
+</h3>
 
 
 

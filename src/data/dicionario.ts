@@ -98,4 +98,19 @@ categoria:"Fisiopatologia",
 definicao:
 "Redução da oferta de oxigênio aos tecidos, podendo comprometer o funcionamento celular."
 },
+
+{
+  termo: "Bradicinesia",
+  categoria: "Neurologia",
+  definicao:
+    "Lentificação anormal dos movimentos voluntários, característica da síndrome parkinsoniana."
+},
+
+{
+  termo: "Cefaleia",
+  categoria: "Neurologia",
+  definicao:
+    "Dor localizada na região da cabeça, podendo apresentar diferentes características, intensidades e causas. Pode ser classificada como primária, quando a própria cefaleia é a condição principal, ou secundária, quando resulta de outra doença ou alteração."
+},
+
 ];

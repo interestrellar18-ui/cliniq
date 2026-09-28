@@ -1363,5 +1363,578 @@ conduct:[
   }
 },
 
+{
+  id: "008",
+  title: "CASO 08",
+  specialty: "Neurologia",
+  difficulty: "Avançado",
+  status: "Em investigação",
+
+  patient: {
+    name: "Antônio José Ferreira",
+    age: 61,
+    sex: "Masculino"
+  },
+
+  chiefComplaint:
+    "Cefaleia súbita, vômitos e fraqueza no lado esquerdo do corpo há aproximadamente 40 minutos.",
+
+  history:
+    "Paciente de 61 anos, hipertenso há cerca de 15 anos, com histórico de controle irregular da pressão arterial, é levado ao pronto atendimento pela família após apresentar cefaleia súbita e intensa enquanto estava em casa. Poucos minutos depois, apresentou dois episódios de vômitos e passou a apresentar dificuldade para movimentar o lado esquerdo do corpo. A família relata que o paciente estava consciente inicialmente, mas tornou-se progressivamente sonolento durante o trajeto até o hospital. Nega trauma craniano recente, crise convulsiva ou uso conhecido de anticoagulantes. Faz uso irregular de anti-hipertensivos.",
+
+  physicalExam: [
+    "Paciente sonolento, despertando ao chamado",
+    "Pressão arterial: 218/118 mmHg",
+    "Frequência cardíaca: 82 bpm",
+    "Frequência respiratória: 18 irpm",
+    "SpO₂: 97% em ar ambiente",
+    "Hemiparesia esquerda, com predomínio em membro superior",
+    "Paralisia facial central à esquerda",
+    "Disartria",
+    "Pupilas isocóricas e fotorreagentes",
+    "Reflexos profundos aumentados à esquerda",
+    "Sem sinais externos de trauma"
+  ],
+
+  exams: [
+    {
+      name: "Glicemia capilar",
+      result: "138 mg/dL."
+    },
+
+    {
+      name: "Tomografia computadorizada de crânio sem contraste",
+      result:
+        "Área hiperdensa intraparenquimatosa localizada nos núcleos da base direitos, com edema periférico e efeito de massa, associada a discreta compressão do ventrículo lateral direito. Pequena quantidade de sangue intraventricular.",
+      media: [
+        {
+          type: "image",
+          src: "/casos/008/tc008.png",
+          caption:
+            "Tomografia de crânio demonstrando hemorragia intraparenquimatosa profunda à direita, com extensão ventricular."
+        }
+      ]
+    },
+
+    {
+      name: "Hemograma",
+      result:
+        "Hemoglobina 14,2 g/dL; plaquetas 238.000/mm³."
+    },
+
+    {
+      name: "Coagulograma",
+      result:
+        "INR 1,02; TAP e TTPa sem alterações significativas."
+    },
+
+    {
+      name: "Angiotomografia cerebral",
+      result:
+        "Não foram identificadas malformações arteriovenosas ou aneurismas intracranianos evidentes."
+    }
+  ],
+
+  clues: [
+    "Cefaleia súbita e intensa",
+    "Vômitos",
+    "Rebaixamento progressivo do nível de consciência",
+    "Déficit neurológico focal",
+    "Hemiparesia esquerda",
+    "Pressão arterial extremamente elevada",
+    "Hemorragia intraparenquimatosa na tomografia",
+    "Localização profunda nos núcleos da base",
+    "Extensão intraventricular",
+    "Ausência de alteração significativa no coagulograma",
+    "Ausência de aneurisma ou malformação arteriovenosa evidente"
+  ],
+
+  hypotheses: [
+    "AVC hemorrágico por hemorragia intraparenquimatosa",
+    "AVC isquêmico com transformação hemorrágica",
+    "Hemorragia subaracnoidea",
+    "Hematoma subdural",
+    "Tumor cerebral hemorrágico"
+  ],
+
+  diagnosis:
+    "Hemorragia intracerebral espontânea profunda em núcleos da base direitos, provavelmente associada à hipertensão arterial crônica, com extensão intraventricular.",
+
+  expectedAnswer: {
+    summary:
+      "Paciente apresenta quadro neurológico agudo caracterizado por cefaleia intensa, vômitos, rebaixamento do nível de consciência e hemiparesia esquerda. A tomografia demonstra hemorragia intraparenquimatosa profunda nos núcleos da base direitos, com extensão intraventricular. O contexto de hipertensão arterial grave e crônica, associado à localização profunda do hematoma e à ausência de coagulopatia ou lesão vascular evidente, favorece hemorragia intracerebral hipertensiva.",
+
+    discussion:
+      "A hemorragia intracerebral espontânea ocorre pela ruptura de um vaso dentro do parênquima cerebral, produzindo um hematoma que pode causar lesão direta do tecido nervoso, edema, aumento da pressão intracraniana e efeito de massa. Hemorragias relacionadas à hipertensão crônica frequentemente acometem estruturas profundas, como núcleos da base, tálamo, ponte e cerebelo. Neste caso, a combinação de hipertensão arterial grave, hematoma profundo e ausência de anticoagulação ou alteração importante da coagulação favorece etiologia hipertensiva. A presença de sangue no sistema ventricular aumenta a gravidade do quadro e exige monitorização e manejo especializado.",
+
+    reasoning: [
+      "Reconhecer a instalação súbita do déficit neurológico associada à cefaleia e aos vômitos.",
+      "Diferenciar inicialmente AVC hemorrágico de AVC isquêmico.",
+      "Interpretar a hiperdensidade intraparenquimatosa na tomografia como sangue agudo.",
+      "Relacionar a hemiparesia esquerda à lesão localizada no hemisfério cerebral direito.",
+      "Reconhecer a localização profunda do hematoma como característica compatível com hemorragia associada à hipertensão.",
+      "Identificar a extensão intraventricular como marcador de maior gravidade.",
+      "Considerar causas secundárias de hemorragia intracerebral e interpretar a angiotomografia."
+    ],
+
+    conduct: [
+      "Garantir estabilização inicial e monitorização contínua.",
+      "Avaliar e proteger a via aérea diante do rebaixamento do nível de consciência.",
+      "Realizar controle cuidadoso da pressão arterial em ambiente monitorizado.",
+      "Avaliar sinais de hipertensão intracraniana e deterioração neurológica.",
+      "Solicitar avaliação neurocirúrgica e neurológica especializada.",
+      "Avaliar a necessidade de medidas para controle da pressão intracraniana conforme evolução clínica e radiológica.",
+      "Realizar investigação etiológica da hemorragia intracerebral.",
+      "Monitorizar a extensão ventricular e possível desenvolvimento de hidrocefalia.",
+      "Após estabilização, estabelecer estratégia de controle rigoroso dos fatores de risco, especialmente hipertensão arterial."
+    ]
+  }
+},
+
+{
+  id: "009",
+  title: "CASO 09",
+  specialty: "Neurologia",
+  difficulty: "Intermediário",
+  status: "Em investigação",
+
+  patient: {
+    name: "Jean Paulo Ribeiro",
+    age: 66,
+    sex: "Masculino"
+  },
+
+  chiefComplaint:
+    "Tremor na mão direita e dificuldade para realizar movimentos que antes fazia com facilidade há aproximadamente dois anos.",
+
+  history:
+    "Paciente de 66 anos, acompanhado pela esposa, relata tremor iniciado há cerca de dois anos na mão direita, inicialmente percebido principalmente quando estava sentado ou com a mão apoiada. Nos últimos meses, passou a apresentar lentificação progressiva dos movimentos, dificuldade para abotoar roupas, escrever e manusear talheres. A esposa relata que ele passou a caminhar mais devagar e com passos menores, além de apresentar redução dos movimentos dos braços durante a marcha. Refere constipação intestinal há alguns anos e diminuição do olfato. Nos últimos meses, a família percebeu que sua expressão facial ficou menos espontânea. Nega perda de consciência, crises convulsivas ou início súbito dos sintomas. Não faz uso de medicamentos conhecidos por causar parkinsonismo.",
+
+  physicalExam: [
+    "Paciente consciente, orientado e colaborativo",
+    "Tremor de repouso predominante na mão direita, com frequência baixa e regular",
+    "Bradicinesia, com lentificação dos movimentos repetitivos dos dedos da mão direita",
+    "Rigidez muscular com predomínio no hemicorpo direito",
+    "Redução da movimentação do membro superior direito durante a marcha",
+    "Marcha com passos curtos",
+    "Redução da amplitude dos movimentos dos braços",
+    "Hipomimia facial",
+    "Fala em baixo volume",
+    "Sem déficit de força muscular significativo",
+    "Sem alteração sensitiva focal evidente"
+  ],
+
+  exams: [
+    {
+      name: "Avaliação neurológica",
+      result:
+        "Presença de bradicinesia associada a rigidez e tremor de repouso, com predomínio no lado direito."
+    },
+
+    {
+      name: "Ressonância magnética de encéfalo",
+      result:
+        "Sem evidências de lesão estrutural intracraniana que justifique o quadro clínico. Exame sem alterações específicas para doença de Parkinson."
+    },
+
+    {
+      name: "SPECT cerebral com transportador de dopamina (DaT-SPECT)",
+      result:
+        "Redução assimétrica da captação do transportador de dopamina nos núcleos estriados, mais acentuada à esquerda."
+    },
+
+    {
+      name: "Avaliação da marcha",
+      result:
+        "Passos curtos, redução do balanço dos membros superiores e diminuição da velocidade da marcha."
+    }
+  ],
+
+  clues: [
+    "Tremor predominantemente de repouso",
+    "Início assimétrico dos sintomas",
+    "Bradicinesia",
+    "Rigidez muscular",
+    "Marcha com passos curtos",
+    "Redução do balanço dos braços",
+    "Hipomimia",
+    "Hipofonia",
+    "Constipação intestinal",
+    "Redução do olfato",
+    "Ausência de déficit motor focal",
+    "Redução assimétrica da captação dopaminérgica no DaT-SPECT"
+  ],
+
+  hypotheses: [
+    "Doença de Parkinson",
+    "Tremor essencial",
+    "Parkinsonismo vascular",
+    "Parkinsonismo induzido por medicamentos",
+    "Atrofia de múltiplos sistemas"
+  ],
+
+  diagnosis:
+    "Doença de Parkinson idiopática, com síndrome parkinsoniana predominantemente assimétrica.",
+
+  expectedAnswer: {
+    summary:
+      "Paciente apresenta síndrome parkinsoniana caracterizada por bradicinesia associada a tremor de repouso e rigidez, inicialmente predominante no hemicorpo direito. A progressão lenta e assimétrica, associada a alterações de marcha e manifestações não motoras como constipação e hiposmia, é compatível com doença de Parkinson.",
+
+    discussion:
+      "A doença de Parkinson é um distúrbio neurodegenerativo caracterizado pela perda progressiva de neurônios dopaminérgicos, especialmente na substância negra, levando à redução da dopamina nos circuitos dos núcleos da base. Clinicamente, a bradicinesia é um componente central da síndrome parkinsoniana e pode estar associada a rigidez e tremor de repouso. A assimetria dos sintomas e a evolução progressiva são características frequentes. Manifestações não motoras, como constipação e redução do olfato, também podem ocorrer e podem preceder os sintomas motores. O DaT-SPECT demonstra redução da transmissão dopaminérgica estriatal, apoiando a presença de degeneração nigroestriatal, embora o diagnóstico permaneça predominantemente clínico.",
+
+    reasoning: [
+      "Reconhecer a bradicinesia como elemento central da síndrome parkinsoniana.",
+      "Identificar a associação entre bradicinesia, rigidez e tremor de repouso.",
+      "Reconhecer o padrão assimétrico e progressivo do quadro.",
+      "Diferenciar tremor de repouso do tremor essencial.",
+      "Relacionar alterações de marcha, hipomimia e hipofonia ao parkinsonismo.",
+      "Identificar manifestações não motoras associadas à doença de Parkinson.",
+      "Interpretar a redução assimétrica da captação dopaminérgica no DaT-SPECT."
+    ],
+
+    conduct: [
+      "Realizar acompanhamento neurológico periódico.",
+      "Avaliar impacto dos sintomas motores e não motores na funcionalidade e qualidade de vida.",
+      "Considerar tratamento farmacológico individualizado conforme idade, sintomas e impacto funcional.",
+      "Instituir medidas não farmacológicas, incluindo atividade física e fisioterapia.",
+      "Avaliar risco de quedas e alterações da marcha.",
+      "Investigar e manejar sintomas não motores, como constipação e alterações do sono.",
+      "Orientar paciente e familiares sobre a natureza progressiva da doença e possibilidades de tratamento."
+    ]
+  }
+},
+
+{
+  id: "010",
+  title: "CASO 10",
+  specialty: "Neurologia",
+  difficulty: "Intermediário",
+  status: "Em investigação",
+
+  patient: {
+    name: "Beatriz Almeida Costa",
+    age: 27,
+    sex: "Feminino"
+  },
+
+  chiefComplaint:
+    "Crises recorrentes de dor de cabeça intensa, acompanhadas de náuseas e sensibilidade à luz.",
+
+  history:
+    "Paciente de 27 anos relata episódios recorrentes de cefaleia há aproximadamente cinco anos, com piora da frequência nos últimos meses. As crises ocorrem cerca de duas a três vezes por mês e geralmente começam como uma dor pulsátil de intensidade moderada a intensa, predominantemente na região frontotemporal direita. A dor piora quando realiza atividades físicas habituais e costuma durar entre 8 e 12 horas quando não utiliza medicação. Durante as crises, apresenta náuseas, fotofobia e fonofobia, preferindo permanecer em um ambiente silencioso e escuro. Nega febre, rigidez de nuca, perda de força, alterações da fala, perda de consciência ou início súbito da dor. Relata que a mãe também apresenta crises semelhantes.",
+
+  physicalExam: [
+    "Paciente consciente, orientada e colaborativa",
+    "Exame neurológico sem alterações focais",
+    "Força muscular preservada nos quatro membros",
+    "Sensibilidade superficial preservada",
+    "Reflexos profundos simétricos",
+    "Pupilas isocóricas e fotorreagentes",
+    "Coordenação motora preservada",
+    "Sem rigidez de nuca"
+  ],
+
+  exams: [
+    {
+      name: "Avaliação neurológica",
+      result:
+        "Exame neurológico completo sem déficits focais ou sinais de hipertensão intracraniana."
+    },
+
+    {
+  name: "Ressonância magnética de encéfalo",
+  result:
+    "Sem alterações estruturais intracranianas significativas.",
+  media: [
+    {
+      type: "image",
+      src: "/casos/010/rm010.png",
+      caption:
+        "Ressonância magnética de encéfalo sem alterações estruturais significativas."
+    }
+  ]
+},
+
+    {
+      name: "Hemograma",
+      result:
+        "Sem alterações relevantes."
+    }
+  ],
+
+  clues: [
+    "Cefaleia recorrente há vários anos",
+    "Dor pulsátil",
+    "Intensidade moderada a intensa",
+    "Predomínio unilateral",
+    "Piora com atividade física habitual",
+    "Náuseas",
+    "Fotofobia",
+    "Fonofobia",
+    "Duração de várias horas",
+    "Exame neurológico normal",
+    "História familiar semelhante",
+    "Ausência de sinais de alarme"
+  ],
+
+  hypotheses: [
+    "Enxaqueca sem aura",
+    "Cefaleia do tipo tensional",
+    "Cefaleia em salvas",
+    "Cefaleia secundária a lesão intracraniana",
+    "Neuralgia do trigêmeo"
+  ],
+
+  diagnosis:
+    "Enxaqueca sem aura.",
+
+  expectedAnswer: {
+    summary:
+      "Paciente apresenta crises recorrentes de cefaleia pulsátil, predominantemente unilateral, de intensidade moderada a intensa, associadas a náuseas, fotofobia e fonofobia, com piora durante atividade física e exame neurológico normal. O conjunto é compatível com enxaqueca sem aura.",
+
+    discussion:
+      "A enxaqueca é uma cefaleia primária caracterizada por episódios recorrentes de dor, frequentemente unilateral e pulsátil, podendo estar associada a náuseas e sintomas de hipersensibilidade à luz e ao som. A duração de várias horas, a piora com atividade física e a ausência de sinais neurológicos focais ou outros sinais de alarme favorecem o diagnóstico de enxaqueca. A história familiar também é frequente. A presença de exame neurológico normal e ausência de sinais de alarme reduzem a suspeita de uma causa secundária.",
+
+    reasoning: [
+      "Reconhecer o padrão recorrente e estereotipado das crises.",
+      "Identificar as características típicas da dor migranosa.",
+      "Relacionar náuseas, fotofobia e fonofobia à enxaqueca.",
+      "Diferenciar enxaqueca de cefaleia do tipo tensional e cefaleia em salvas.",
+      "Pesquisar sinais de alarme que indiquem possível cefaleia secundária.",
+      "Interpretar o exame neurológico normal dentro do contexto clínico."
+    ],
+
+    conduct: [
+      "Orientar identificação e redução dos possíveis fatores desencadeantes das crises.",
+      "Registrar frequência, duração e características das cefaleias.",
+      "Realizar tratamento das crises conforme intensidade e características individuais.",
+      "Avaliar necessidade de tratamento preventivo caso as crises sejam frequentes ou incapacitantes.",
+      "Orientar medidas comportamentais, incluindo regularidade do sono, alimentação e hidratação.",
+      "Reavaliar periodicamente a frequência e o impacto funcional das crises.",
+      "Orientar retorno imediato diante do surgimento de sinais de alarme ou mudança importante do padrão da cefaleia."
+    ]
+  }
+},
+
+{
+  id: "011",
+  title: "CASO 11",
+  specialty: "Neurologia",
+  difficulty: "Intermediário",
+  status: "Em investigação",
+
+  patient: {
+    name: "Juliana Martins Oliveira",
+    age: 34,
+    sex: "Feminino"
+  },
+
+  chiefComplaint:
+    "Dor de cabeça em pressão, recorrente, principalmente no final do dia.",
+
+  history:
+    "Paciente de 34 anos relata cefaleia recorrente há aproximadamente oito meses, com piora nos períodos de maior demanda profissional. Descreve a dor como uma pressão ou aperto envolvendo toda a cabeça, principalmente nas regiões frontal e occipital, sem caráter pulsátil. As crises geralmente começam no final da tarde e podem permanecer por várias horas. Refere intensidade leve a moderada, permitindo a realização das atividades habituais. Nega náuseas e vômitos. Apresenta ocasionalmente sensibilidade aumentada ao som, mas nega fotofobia importante. Relata sensação frequente de tensão e desconforto na musculatura cervical e dos ombros. A dor não piora ao caminhar ou subir escadas. Faz uso eventual de analgésicos comuns.",
+
+  physicalExam: [
+    "Paciente consciente, orientada e colaborativa",
+    "Exame neurológico sem déficits focais",
+    "Força muscular preservada nos quatro membros",
+    "Sensibilidade preservada",
+    "Reflexos profundos simétricos",
+    "Pupilas isocóricas e fotorreagentes",
+    "Sem rigidez de nuca",
+    "Sensibilidade e tensão aumentadas à palpação da musculatura cervical e dos músculos pericranianos"
+  ],
+
+  exams: [
+    {
+      name: "Avaliação neurológica",
+      result:
+        "Exame neurológico sem alterações focais ou sinais de comprometimento neurológico."
+    },
+
+    {
+      name: "Ressonância magnética de encéfalo",
+      result:
+        "Sem alterações estruturais intracranianas significativas."
+    },
+
+    {
+      name: "Avaliação da musculatura cervical",
+      result:
+        "Aumento da tensão e sensibilidade da musculatura cervical e pericraniana, sem déficit neurológico associado."
+    }
+  ],
+
+  clues: [
+    "Cefaleia recorrente",
+    "Dor bilateral",
+    "Sensação de pressão ou aperto",
+    "Intensidade leve a moderada",
+    "Ausência de caráter pulsátil",
+    "Não piora com atividade física habitual",
+    "Ausência de náuseas e vômitos",
+    "Fotofobia ausente ou discreta",
+    "Tensão da musculatura cervical e pericraniana",
+    "Piora ao final do dia",
+    "Relação com períodos de maior estresse",
+    "Exame neurológico normal"
+  ],
+
+  hypotheses: [
+    "Enxaqueca sem aura",
+    "Cefaleia do tipo tensional",
+    "Cefaleia em salvas",
+    "Cefaleia cervicogênica",
+    "Cefaleia secundária"
+  ],
+
+  diagnosis:
+    "Cefaleia do tipo tensional episódica frequente.",
+
+  expectedAnswer: {
+    summary:
+      "Paciente apresenta cefaleia recorrente caracterizada por dor bilateral, em pressão ou aperto, de intensidade leve a moderada, sem piora com atividade física e sem náuseas ou vômitos. A associação com tensão da musculatura cervical e pericraniana e o exame neurológico normal são compatíveis com cefaleia do tipo tensional.",
+
+    discussion:
+      "A cefaleia do tipo tensional é uma cefaleia primária caracterizada tipicamente por dor bilateral, de caráter opressivo ou constritivo e intensidade leve a moderada. Diferentemente da enxaqueca, geralmente não apresenta dor pulsátil, não é agravada por atividade física habitual e não costuma estar associada a náuseas ou vômitos. Pode apresentar associação com tensão e sensibilidade da musculatura pericraniana e cervical. Fatores como estresse, sono inadequado e períodos prolongados de atividade podem contribuir para o surgimento ou agravamento das crises.",
+
+    reasoning: [
+      "Reconhecer o padrão bilateral e opressivo da dor.",
+      "Identificar a intensidade leve a moderada e a ausência de caráter pulsátil.",
+      "Diferenciar a cefaleia tensional da enxaqueca.",
+      "Relacionar a tensão da musculatura cervical e pericraniana ao quadro clínico.",
+      "Reconhecer a ausência de sinais neurológicos focais ou sinais de alarme.",
+      "Considerar a frequência das crises para classificar o padrão da cefaleia."
+    ],
+
+    conduct: [
+      "Orientar medidas para redução de fatores desencadeantes e agravantes.",
+      "Estimular regularidade do sono, alimentação e hidratação.",
+      "Orientar pausas durante atividades prolongadas e atenção à postura.",
+      "Avaliar a presença de estresse e tensão muscular associados às crises.",
+      "Considerar tratamento sintomático individualizado.",
+      "Evitar uso excessivo de analgésicos para reduzir o risco de cefaleia por uso excessivo de medicamentos.",
+      "Reavaliar a frequência e o impacto funcional das crises.",
+      "Orientar retorno caso ocorra mudança importante do padrão da cefaleia ou aparecimento de sinais de alarme."
+    ]
+  }
+},
+
+{
+  id: "012",
+  title: "CASO 12",
+  specialty: "Neurologia / Medicina do Sono",
+  difficulty: "Intermediário",
+  status: "Em investigação",
+
+  patient: {
+    name: "Roberto Henrique Souza",
+    age: 49,
+    sex: "Masculino"
+  },
+
+  chiefComplaint:
+    "Sonolência excessiva durante o dia e cansaço mesmo após uma noite inteira de sono.",
+
+  history:
+    "Paciente de 49 anos relata cansaço e sonolência durante o dia há aproximadamente dois anos, com piora progressiva. A esposa relata que o paciente ronca intensamente durante a noite e apresenta períodos em que parece parar de respirar enquanto dorme, seguidos por engasgos e retomada ruidosa da respiração. O paciente refere acordar frequentemente com boca seca e cefaleia pela manhã. Apesar de dormir aproximadamente sete a oito horas por noite, acorda com sensação de sono não reparador. Durante o dia, apresenta dificuldade de concentração e episódios de sonolência enquanto assiste televisão e durante trajetos longos como passageiro. Possui hipertensão arterial e ganho de peso importante nos últimos anos.",
+
+  physicalExam: [
+    "Paciente consciente, orientado e colaborativo",
+    "IMC: 32 kg/m²",
+    "Pressão arterial: 148/94 mmHg",
+    "Pescoço com circunferência aumentada",
+    "Orofaringe com redução do espaço aéreo e aumento das estruturas faríngeas",
+    "Sem déficits neurológicos focais",
+    "Força muscular preservada",
+    "Sensibilidade preservada",
+    "Reflexos profundos simétricos"
+  ],
+
+  exams: [
+    {
+      name: "Polissonografia",
+      result:
+        "Múltiplos episódios de obstrução das vias aéreas superiores durante o sono, associados a dessaturações de oxigênio e microdespertares. Índice de apneia-hipopneia (IAH) de 28 eventos por hora."
+    },
+
+    {
+      name: "Oximetria durante o sono",
+      result:
+        "Episódios recorrentes de dessaturação de oxigênio durante o sono, com redução da saturação associada aos eventos respiratórios."
+    },
+
+    {
+      name: "Hemograma",
+      result:
+        "Sem alterações relevantes."
+    },
+
+    {
+      name: "Avaliação cardiometabólica",
+      result:
+        "Hipertensão arterial e alterações metabólicas associadas ao excesso de peso."
+    }
+  ],
+
+  clues: [
+    "Sonolência excessiva durante o dia",
+    "Sono não reparador",
+    "Ronco intenso",
+    "Pausas respiratórias observadas durante o sono",
+    "Engasgos durante a noite",
+    "Despertares frequentes",
+    "Cefaleia matinal",
+    "Boca seca ao acordar",
+    "Dificuldade de concentração",
+    "Obesidade",
+    "Circunferência cervical aumentada",
+    "Hipertensão arterial",
+    "Índice de apneia-hipopneia elevado",
+    "Dessaturação de oxigênio durante o sono"
+  ],
+
+  hypotheses: [
+    "Insônia crônica",
+    "Narcolepsia",
+    "Síndrome da apneia obstrutiva do sono",
+    "Síndrome das pernas inquietas",
+    "Apneia central do sono"
+  ],
+
+  diagnosis:
+    "Síndrome da apneia obstrutiva do sono (SAOS) de intensidade moderada.",
+
+  expectedAnswer: {
+    
+    summary:
+      "Paciente apresenta sonolência diurna excessiva, sono não reparador, ronco intenso e pausas respiratórias observadas durante o sono. A polissonografia demonstra episódios recorrentes de obstrução das vias aéreas superiores associados a dessaturação e microdespertares, com índice de apneia-hipopneia de 28 eventos por hora, compatível com síndrome da apneia obstrutiva do sono moderada.",
+
+    discussion:
+      "A síndrome da apneia obstrutiva do sono é caracterizada por episódios repetidos de obstrução parcial ou completa das vias aéreas superiores durante o sono. Esses eventos provocam alterações na oxigenação, microdespertares e fragmentação do sono, podendo resultar em sonolência diurna, dificuldade de concentração e cefaleia matinal. Ronco intenso e pausas respiratórias observadas por familiares são pistas importantes. Obesidade, aumento da circunferência cervical e alterações anatômicas da via aérea superior são fatores de risco frequentes. A polissonografia é utilizada para confirmar o diagnóstico e quantificar a gravidade por meio do índice de apneia-hipopneia.",
+
+    reasoning: [
+      "Reconhecer a associação entre ronco intenso, pausas respiratórias e sonolência diurna.",
+      "Identificar o sono não reparador como consequência da fragmentação do sono.",
+      "Relacionar obesidade e aumento da circunferência cervical ao risco de obstrução das vias aéreas.",
+      "Diferenciar apneia obstrutiva de outras causas de sonolência excessiva.",
+      "Interpretar a polissonografia e o índice de apneia-hipopneia.",
+      "Classificar a gravidade do quadro a partir do IAH."
+    ],
+
+    conduct: [
+      "Orientar medidas para redução dos fatores de risco, especialmente perda de peso quando indicada.",
+      "Avaliar indicação de tratamento com pressão positiva contínua nas vias aéreas (CPAP).",
+      "Orientar medidas relacionadas à higiene e regularidade do sono.",
+      "Avaliar consumo de álcool e medicamentos que possam agravar a obstrução durante o sono.",
+      "Investigar e tratar fatores cardiovasculares associados, especialmente hipertensão arterial.",
+      "Avaliar adesão e resposta ao tratamento durante o acompanhamento.",
+      "Orientar o paciente sobre os riscos relacionados à sonolência, especialmente ao dirigir ou operar máquinas."
+    ]
+  }
+},
+
 ];
 
