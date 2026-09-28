@@ -1022,7 +1022,7 @@ status:"Em investigação",
 
 patient:{
 
-name:"Helena Maria Duarte",
+name:"Kesia Beatriz Goçalves ",
 
 age:72,
 
@@ -1219,7 +1219,7 @@ conduct:[
   status: "Em investigação",
 
   patient: {
-    name: "João Carlos Mendes",
+    name: "Victor Silva Almeida",
     age: 68,
     sex: "Masculino"
   },
@@ -1316,7 +1316,7 @@ conduct:[
     "Paralisia facial central à direita",
     "Afasia",
     "Desvio conjugado do olhar para a esquerda",
-    "Início dos sintomas há aproximadamente 1 hora",
+    "Início abrupto dos sintomas há aproximadamente 1 hora",
     "Ausência de hemorragia na tomografia",
     "Oclusão de ramo proximal da artéria cerebral média esquerda",
     "Fibrilação atrial",
@@ -1326,7 +1326,6 @@ conduct:[
   hypotheses: [
     "AVC isquêmico",
     "AVC hemorrágico",
-    "Crise epiléptica com paralisia de Todd",
     "Hipoglicemia",
     "Tumor cerebral"
   ],
@@ -1478,7 +1477,7 @@ conduct:[
     ],
 
     conduct: [
-      "Garantir estabilização inicial e monitorização contínua.",
+      "Garantir estabilização inicial e monitorização contínua(MOVE).",
       "Avaliar e proteger a via aérea diante do rebaixamento do nível de consciência.",
       "Realizar controle cuidadoso da pressão arterial em ambiente monitorizado.",
       "Avaliar sinais de hipertensão intracraniana e deterioração neurológica.",
@@ -1499,7 +1498,7 @@ conduct:[
   status: "Em investigação",
 
   patient: {
-    name: "Jean Paulo Ribeiro",
+    name: "Jean Saraiva",
     age: 66,
     sex: "Masculino"
   },
@@ -1508,7 +1507,7 @@ conduct:[
     "Tremor na mão direita e dificuldade para realizar movimentos que antes fazia com facilidade há aproximadamente dois anos.",
 
   history:
-    "Paciente de 66 anos, acompanhado pela esposa, relata tremor iniciado há cerca de dois anos na mão direita, inicialmente percebido principalmente quando estava sentado ou com a mão apoiada. Nos últimos meses, passou a apresentar lentificação progressiva dos movimentos, dificuldade para abotoar roupas, escrever e manusear talheres. A esposa relata que ele passou a caminhar mais devagar e com passos menores, além de apresentar redução dos movimentos dos braços durante a marcha. Refere constipação intestinal há alguns anos e diminuição do olfato. Nos últimos meses, a família percebeu que sua expressão facial ficou menos espontânea. Nega perda de consciência, crises convulsivas ou início súbito dos sintomas. Não faz uso de medicamentos conhecidos por causar parkinsonismo.",
+    "Paciente de 66 anos, acompanhado pela esposa, relata tremor iniciado há cerca de dois anos na mão direita, inicialmente percebido principalmente quando estava sentado ou com a mão apoiada. Nos últimos meses, passou a apresentar lentificação progressiva dos movimentos, dificuldade para abotoar roupas, escrever e manusear talheres. A esposa relata que ele passou a caminhar mais devagar e com passos menores, além de apresentar redução dos movimentos dos braços durante a marcha. Refere constipação intestinal há alguns anos e diminuição do olfato. Nos últimos meses, a família percebeu que sua expressão facial ficou menos espontânea e notou momentos de lúcidos intercalados com momentos de confusão. Nega perda de consciência, crises convulsivas ou início súbito dos sintomas. Refere alucinações visuais. Não faz uso de medicamentos conhecidos por causar parkinsonismo.",
 
   physicalExam: [
     "Paciente consciente, orientado e colaborativo",
@@ -1562,45 +1561,48 @@ conduct:[
     "Constipação intestinal",
     "Redução do olfato",
     "Ausência de déficit motor focal",
-    "Redução assimétrica da captação dopaminérgica no DaT-SPECT"
+    "Redução assimétrica da captação dopaminérgica no DaT-SPECT",
+    "Alucinações visuais",
+    "Flutuação cognitiva"
+
   ],
 
   hypotheses: [
     "Doença de Parkinson",
     "Tremor essencial",
-    "Parkinsonismo vascular",
     "Parkinsonismo induzido por medicamentos",
-    "Atrofia de múltiplos sistemas"
+    "Corpos de Lewy"
   ],
 
   diagnosis:
-    "Doença de Parkinson idiopática, com síndrome parkinsoniana predominantemente assimétrica.",
+    "Corpos de Lewy",
 
   expectedAnswer: {
     summary:
-      "Paciente apresenta síndrome parkinsoniana caracterizada por bradicinesia associada a tremor de repouso e rigidez, inicialmente predominante no hemicorpo direito. A progressão lenta e assimétrica, associada a alterações de marcha e manifestações não motoras como constipação e hiposmia, é compatível com doença de Parkinson.",
+      "Paciente apresenta demência por corpos de Lewy caracterizada por bradicinesia associada a tremor de repouso e rigidez, inicialmente predominante no hemicorpo direito. A progressão lenta e assimétrica, associada a alterações de marcha e manifestações não motoras como constipação e hiposmia, é compatível com a síndrome.",
 
     discussion:
-      "A doença de Parkinson é um distúrbio neurodegenerativo caracterizado pela perda progressiva de neurônios dopaminérgicos, especialmente na substância negra, levando à redução da dopamina nos circuitos dos núcleos da base. Clinicamente, a bradicinesia é um componente central da síndrome parkinsoniana e pode estar associada a rigidez e tremor de repouso. A assimetria dos sintomas e a evolução progressiva são características frequentes. Manifestações não motoras, como constipação e redução do olfato, também podem ocorrer e podem preceder os sintomas motores. O DaT-SPECT demonstra redução da transmissão dopaminérgica estriatal, apoiando a presença de degeneração nigroestriatal, embora o diagnóstico permaneça predominantemente clínico.",
+      "Os corpos de Lewy são inclusões anormais dentro dos neurônios, formadas principalmente pelo acúmulo da proteína α-sinucleína. São característicos das sinucleinopatias, principalmente da doença de Parkinson e da demência com corpos de Lewy. Na doença de Parkinson, estão associados à degeneração dos neurônios dopaminérgicos da substância negra, causando redução da dopamina e manifestações como bradicinesia, rigidez e tremor de repouso. Também podem ocorrer sintomas não motores, como constipação, hiposmia e alterações do sono.",
 
     reasoning: [
-      "Reconhecer a bradicinesia como elemento central da síndrome parkinsoniana.",
-      "Identificar a associação entre bradicinesia, rigidez e tremor de repouso.",
-      "Reconhecer o padrão assimétrico e progressivo do quadro.",
-      "Diferenciar tremor de repouso do tremor essencial.",
-      "Relacionar alterações de marcha, hipomimia e hipofonia ao parkinsonismo.",
-      "Identificar manifestações não motoras associadas à doença de Parkinson.",
-      "Interpretar a redução assimétrica da captação dopaminérgica no DaT-SPECT."
+      "Identificar os corpos de Lewy como acúmulos intracelulares de α-sinucleína",
+"Relacionar os corpos de Lewy às sinucleinopatias",
+"Associar a degeneração da substância negra à redução de dopamina",
+"Relacionar a redução de dopamina aos sinais de parkinsonismo",
+"Reconhecer sintomas motores, como bradicinesia, rigidez e tremor de repouso",
+"Identificar manifestações não motoras, como hiposmia, constipação e alterações do sono",
+"Diferenciar doença de Parkinson de demência com corpos de Lewy, principalmente pela relação temporal entre sintomas cognitivos e motores"
     ],
 
     conduct: [
-      "Realizar acompanhamento neurológico periódico.",
-      "Avaliar impacto dos sintomas motores e não motores na funcionalidade e qualidade de vida.",
-      "Considerar tratamento farmacológico individualizado conforme idade, sintomas e impacto funcional.",
-      "Instituir medidas não farmacológicas, incluindo atividade física e fisioterapia.",
-      "Avaliar risco de quedas e alterações da marcha.",
-      "Investigar e manejar sintomas não motores, como constipação e alterações do sono.",
-      "Orientar paciente e familiares sobre a natureza progressiva da doença e possibilidades de tratamento."
+      "Realizar acompanhamento neurológico periódico",
+"Avaliar a progressão dos sintomas motores e não motores",
+"Monitorar cognição, marcha, equilíbrio e risco de quedas",
+"Utilizar tratamento farmacológico individualizado para controle dos sintomas",
+"Incentivar atividade física e fisioterapia",
+"Manejar sintomas não motores, como alterações do sono, constipação e disfunções autonômicas",
+"Avaliar alterações cognitivas e comportamentais quando presentes",
+"Orientar paciente e familiares sobre a progressão da doença e a importância do acompanhamento contínuo"
     ]
   }
 },
@@ -1725,7 +1727,7 @@ conduct:[
   status: "Em investigação",
 
   patient: {
-    name: "Juliana Martins Oliveira",
+    name: "Emily Fernanda",
     age: 34,
     sex: "Feminino"
   },
@@ -1830,7 +1832,7 @@ conduct:[
   status: "Em investigação",
 
   patient: {
-    name: "Roberto Henrique Souza",
+    name: "Felipe Alves Silva",
     age: 49,
     sex: "Masculino"
   },
