@@ -5,217 +5,156 @@ import { cases } from "../data/cases";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-
 export default function Home() {
+  const [resolvidos, setResolvidos] = useState(0);
 
+  useEffect(() => {
+    const salvos = JSON.parse(
+      localStorage.getItem("casosResolvidos") || "[]"
+    );
 
-const [resolvidos,setResolvidos] = useState(0);
+    setResolvidos(salvos.length);
+  }, []);
 
+  const totalCasos = cases.length;
 
+  return (
+    <main className="game">
 
-useEffect(()=>{
+      <header className="header">
+        <h1>
+          CLINQI
+        </h1>
 
-const salvos = JSON.parse(
-localStorage.getItem("casosResolvidos") || "[]"
-);
+        <p>
+          ARQUIVO DE INVESTIGAÇÃO CLÍNICA
+        </p>
+      </header>
 
+      <section className="top-menu">
 
-setResolvidos(salvos.length);
+        <Link
+          href="/evidencias"
+          className="tab"
+        >
+          SINTOMAS
+        </Link>
 
+        <Link
+          href="/observacoes"
+          className="tab"
+        >
+          MINHAS NOTAS
+        </Link>
 
-},[]);
+        <Link
+          href="/diagnosticos"
+          className="tab"
+        >
+          DIAGNÓSTICOS
+        </Link>
 
+        <Link
+          href="/dicionario"
+          className="tab"
+        >
+          DICIONÁRIO
+        </Link>
 
+      </section>
 
-const totalCasos = cases.length;
 
+      {/* MARCA INSTITUCIONAL — SOMENTE MOBILE */}
+      <div className="institutional-brand-mobile">
+        <img
+          src="/logo-liga.png"
+          alt=""
+        />
 
+        <span>
+          Desenvolvido por Êmilly Fernandes
+        </span>
+      </div>
 
-return (
 
-<main className="game">
+      <div className="main-area">
 
+        <section className="cases">
 
-<header className="header">
+          <div className="instruction">
+            ▶ selecione um prontuário para iniciar investigação
+          </div>
 
-<h1>
-CLINIQ
-</h1>
+          <div className="folder-grid">
 
-<p>
-ARQUIVO DE INVESTIGAÇÃO CLÍNICA
-</p>
+            {cases.map((item) => (
+              <Folder
+                key={item.id}
+                id={item.id}
+                title={item.title}
+              />
+            ))}
 
-</header>
+            <Folder
+              id="00x"
+              title="Caso vazio"
+              locked
+            />
 
+          </div>
 
+        </section>
 
 
+        <aside className="side-panel">
 
-<section className="top-menu">
+          <div className="counter">
 
+            CASOS
 
-<Link 
-href="/evidencias"
-className="tab"
->
-SINTOMAS
-</Link>
+            <strong>
+              {String(resolvidos).padStart(2, "0")} /{" "}
+              {String(totalCasos).padStart(2, "0")}
+            </strong>
 
+          </div>
 
 
-<Link
-href="/observacoes"
-className="tab"
->
-MINHAS NOTAS
-</Link>
+          <div className="box">
 
+            <h3>
+              INSTRUÇÕES
+            </h3>
 
+            <p>
+              Clique em um prontuário
+              para acessar história clínica,
+              exames e evidências.
+            </p>
 
-<Link
-href="/diagnosticos"
-className="tab"
->
-DIAGNÓSTICOS
-</Link>
+          </div>
 
-<Link
-href="/dicionario"
-className="tab"
->
-DICIONÁRIO
-</Link>
 
-</section>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=inter.estrellar18@gmail.com&su=Novo caso clínico&body=Olá, gostaria de adicionar um novo caso ao arquivo."
+            target="_blank"
+            className="new-case"
+          >
 
+            <h3>
+              Solicitar Caso
+            </h3>
 
-<div className="main-area">
+            <span>
+              +
+            </span>
 
+          </a>
 
+        </aside>
 
-<section className="cases">
+      </div>
 
-
-<div className="instruction">
-
-▶ selecione um prontuário para iniciar investigação
-
-</div>
-
-
-
-<div className="folder-grid">
-
-
-{
-cases.map((item)=>(
-<Folder
-
-key={item.id}
-
-id={item.id}
-
-title={item.title}
-
-/>
-))
-}
-
-
-
-<Folder id="00x" title="Caso vazio" locked />
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<aside className="side-panel">
-
-
-
-<div className="counter">
-
-
-CASOS
-
-
-<strong>
-
-{String(resolvidos).padStart(2,"0")} / {String(totalCasos).padStart(2,"0")}
-
-</strong>
-
-
-</div>
-
-
-
-
-
-<div className="box">
-
-
-<h3>
-INSTRUÇÕES
-</h3>
-
-
-<p>
-Clique em um prontuário
-para acessar história clínica,
-exames e evidências.
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=inter.estrellar18@gmail.com&su=Novo caso clínico&body=Olá, gostaria de adicionar um novo caso ao arquivo."
-target="_blank"
-className="new-case"
->
-
-
-<h3>
-Solicitar Caso
-</h3>
-
-
-<span>
-+
-</span>
-
-
-</a>
-
-
-
-
-</aside>
-
-
-
-</div>
-
-
-
-</main>
-
-
-);
-
+    </main>
+  );
 }

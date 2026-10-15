@@ -1,6 +1,6 @@
 {
-  "name": "CLINIQ - Arquivo de Investigação Clínica",
-  "short_name": "CLINIQ",
+  "name": "CLINQI - Arquivo de Investigação Clínica",
+  "short_name": "CLINQI",
   "description": "Arquivo digital de investigação clínica",
   "start_url": "/",
   "display": "standalone",

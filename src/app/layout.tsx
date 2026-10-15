@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ClinIQ",
+  title: "ClinQI",
   description: "Banco de dados clínicos",
   manifest: "/manifest.json",
 };
@@ -25,19 +25,29 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}
+      <body className="min-h-full flex flex-col">
+
+        {/* MARCA INSTITUCIONAL — DESKTOP */}
+        <div className="institutional-brand" aria-hidden="true">
+          <img src="/logo-liga.png" alt="" />
+          <span>Desenvolvido por Êmilly Fernandes</span>
+        </div>
+
+        {children}
+
         <script
-dangerouslySetInnerHTML={{
-__html:`
-if("serviceWorker" in navigator){
-navigator.serviceWorker.register("/sw.js")
-}
-`
-}}
-/>
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/sw.js");
+              }
+            `,
+          }}
+        />
+
       </body>
     </html>
   );
